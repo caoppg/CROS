@@ -1,5 +1,5 @@
 # CROS
-The ontology files for the paper "A core reference ontology for steelmaking process knowledge modelling and information management". This work is funded by the EPSRC project SUSTAIN (https://www.sustainsteel.ac.uk/)
+The ontology files for the paper "A core reference ontology for steelmaking process knowledge modelling and information management". This work is funded by the EPSRC project [SUSTAIN](https://www.sustainsteel.ac.uk/)
 
 ## Getting started
 
@@ -7,7 +7,7 @@ To open the ontology, the following steps should be followed:
 
 * Download .owl files.
 * Save the .owl files in a same folder.
-* Download an ontology editor software, such as [Protégé] (https://protege.stanford.edu/).
+* Download an ontology editor software, such as [Protégé](https://protege.stanford.edu/).
 * Use Protégé to open the CROS.owl file.
 
 
