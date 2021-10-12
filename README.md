@@ -17,11 +17,19 @@ The following figure shows the ontology main classes:
 
 ![Alt text](https://github.com/caoppg/CROS/blob/main/Figs/OntoMainClasses.png)
 
-## Running the tests
+### Ontology main properties:
 
-Some input data sets are in the "data" folder under the project root dictionary. They can be passed to the command line arguments for running the software. For example, to run on the SECOM data set with support value of 0.853653: -p -if D:\XX\XX\XX\KSPMI-master\data\SECOM.csv -of D:\XX\XX\XX\KSPMI-master\result.txt -m 0.853653.
+The following figure shows the ontology main object and data properties:
 
-The [SECOM data set](https://archive.ics.uci.edu/ml/datasets/SECOM) contains measurements of features of semi-conductor productions within a semi-conductor manufacturing process. In the SECOM data set, 1567 recordings and 590 attributes are collected, with each recording being characterized by a time stamp referring to the time that the data is recorded. Each recording is also associated with a label, which is either 1 or -1. The label of every recording explains the correctness of the event, with -1 corresponding to a non-failure event, and 1 refers to a failure. Timestamps are associated with all the records indicating the moment of each specific test point. In total, 104 pieces of records represent the failures of production. The data is stored in a raw text file, within which each line represents an individual example of recording with its timestamp. The features are separated by spaces.
+![Alt text](https://github.com/caoppg/CROS/blob/main/Figs/Ontorelationships.png)
+
+## Case study
+
+The ontology is evaluated and tested on a real-world case study. This case study is about a condition-based maintenance task performed on a cold rolling process at a Tata Steel plant in the UK. The aim of the case study is to evaluate the functionality and usefulness of CROS under real-world scenarios.  We focus on the knowledge reuse and information man-agement perspectives within this condition-based maintenance task.  The obtained results prove that CROS and its related ontological modelling toolsare easy to use for knowledge embedding, data access, and information re-trieval within the steelmaking domain. The remainder of this section gives adetailed description of our experimental set-up, data collection, and ontology-based predictive maintenance process.
+
+A high-level visualisation of roll management system for cold rolling mills:
+![Alt text](https://github.com/caoppg/CROS/blob/main/Figs/ColdRollingPic.png)
+
 
 ## GUIs
 ### The frequent chronicle mining GUI
