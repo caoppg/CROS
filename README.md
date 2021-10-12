@@ -30,40 +30,17 @@ The ontology is evaluated and tested on a real-world case study. This case study
 A high-level visualisation of roll management system for cold rolling mills:
 ![Alt text](https://github.com/caoppg/CROS/blob/main/Figs/ColdRollingPic.png)
 
+### Ontology-based data access using CROS
+The predictive and condition-based maintenance task of Port Talbot cold rolling mills is carried out using OBDA techniques. In this work, we use the Virtual Knowledge Graph System [Ontop](https://ontop-vkg.org). Ontop can map domain ontologies to arbitrary relational databases using R2RML, Direct Mapping, and its own mapping language. The advantage of Ontop is its adoption of Virtual Knowledge Graphs. As the graphs (ontologies) are kept virtual, it avoids the manipulation of relational databases, which is normally considered as work-intensive and expensive. In this way, Ontop provides convenient access to databases and eases the task of data integration. 
 
-## GUIs
-### The frequent chronicle mining GUI
-In the frequent chronicle mining interface, a set of extracted failure chronicles are displayed in the table within the figure below. There are three attributes associated with each failure chronicle: support, accuracy, and coverage.
-
-![Alt text](https://github.com/caoppg/KSPMI/blob/master/Screenshots/chroniclemininginterface.PNG?raw=true "The frequent chronicle mining GUI")
-
-### The SWRL rules transformation and rule pruning GUI
-After the chronicle mining step, the extracted failure chronicles are transformed into a set of SWRL rules. The SWRL rules transformation and rule pruning GUI allows users to visualize the transformed rules and to select the best-quality rules by using a multi-objective optimization approach. Algorithm used for rule quality optimization: Fast Non-dominated Sorting, introduced in the paper [Non-dominated sorting procedure for pareto dominance ranking on multicore cpu and/or gpu](https://link.springer.com/article/10.1007/s10898-016-0468-7).
-
-![Alt text](https://github.com/caoppg/KSPMI/blob/master/Screenshots/rulegenerationinterface.PNG?raw=true "The SWRL rules transformation and rule pruning GUI")
-
-### The experience capitalization GUI
-After obtaining a set of best-quality rules, the experience capitalization phase aims to take as input to the program. The goal of integrating expert rules into the system is to improve the overall fitness of the whole rule base. To enable this step, an experience capitalization GUI is developed to allow users to interact with the expert rule base. Also, the system detects possible issues that may occur during this integration process, such as rule redundancy, conflict, and subsumption.
-
-![Alt text](https://github.com/caoppg/KSPMI/blob/master/Screenshots/ExperienceCapGUI.PNG?raw=true "The experience capitalization GUI")
-
-### The ontology reasoning and failure prediction GUI
-Failure prediction is achieved by using the [Drools rule engine](https://www.drools.org/) to perform ontology reasoning on the data that is populated in the domain ontologies. After prediction, a SQWRL query is created to retrieve the prediction results. The SQWRL language takes an antecedent of a SWRL rule and effectively treats it as a pattern specification for a query. To extract the results, a SQWRL query replaces a rule consequent with a retrieval specification.
-
-![Alt text](https://github.com/caoppg/KSPMI/blob/master/Screenshots/predictwith8.PNG?raw=true "The ontology reasoning and failure prediction GUI")
-
-## Demonstration video
-A demonstration video of the software can be found at [this link](https://github.com/caoppg/KSPMI/blob/ec82e2143eed7f78ece43ec7ac01fcdb67fa6a22/KSPMI%20demo%20video.mp4).
+A tutorial using Ontop can be found at: https://ontop-vkg.org/tutorial/.
 
 ## Built with
-
-* [Maven](https://maven.apache.org/) - Dependency Management
 * [Protégé](https://protege.stanford.edu/) - An ontology editor and framework for building intelligent systems
-* [The OWL API](http://owlapi.sourceforge.net/) - An API for OWL 2 and an efficient in-memory reference implementation.
-* [The SWRL API](https://github.com/protegeproject/swrlapi) - A Java API for working with the OWL-based SWRL rule and SQWRL query languages.
-* [The SQWRL API](https://github.com/protegeproject/swrlapi/wiki/SQWRL) - A SWRL-based query language providing SQL-like operators for extracting information from OWL ontologies.
-* [SPMF](https://www.philippe-fournier-viger.com/spmf/index.php?link=download.php) - A Java Open-Source Data Mining Library.
-* [Weka](https://www.cs.waikato.ac.nz/ml/weka/) - An open source machine learning software.
+* [The OWL API](http://owlapi.sourceforge.net/) - An API for OWL 2 and an efficient in-memory reference implementation
+* [The SWRL API](https://github.com/protegeproject/swrlapi) - A Java API for working with the OWL-based SWRL rule and SQWRL query languages
+* [Ontop](https://ontop-vkg.org/tutorial/) - A Virtual Knowledge Graph System
+* [SPARQL](https://www.w3.org/TR/rdf-sparql-query/) - A semantic query language for databases
 
 ## Author
 
@@ -74,7 +51,5 @@ A demonstration video of the software can be found at [this link](https://github
 This project is licensed under the MIT License - see the [License.md](License) file for details
 
 ## Acknowledgments
-This work has received funding from INTERREG Upper Rhine (European Regional Development Fund) and the
-Ministries for Research of Baden-Württemberg, Rheinland-Pfalz (Germany) and from the Grand Est French Region
-in the framework of the Science Offensive Upper Rhine HALFBACK project.
+This work is mainly funded by the Engineering and Physical Sciences Research Council (EPSRC) [grant number EPSRC EP/S018107/1].
 
