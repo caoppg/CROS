@@ -1,5 +1,5 @@
 # CROS
-The ontology files for the paper "A core reference ontology for steelmaking process knowledge modelling and information management". This work is funded by the EPSRC project [SUSTAIN](https://www.sustainsteel.ac.uk/)
+The ontology files for the paper "A core reference ontology for steelmaking process knowledge modelling and information management". This work is funded by the EPSRC project [SUSTAIN](https://www.sustainsteel.ac.uk/).
 
 ## Getting started
 
