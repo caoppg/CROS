@@ -15,7 +15,7 @@ To open the ontology, the following steps should be followed:
 
 The following figure shows the ontology main classes:
 
-![Alt text](https://github.com/caoppg/KSPMI/blob/master/Screenshots/chroniclemininginterface.PNG?raw=true "The frequent chronicle mining GUI")
+![Alt text](https://github.com/caoppg/CROS/blob/main/Figs/OntoMainClasses.png)
 
 ## Running the tests
 
