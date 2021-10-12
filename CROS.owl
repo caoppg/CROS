@@ -1,0 +1,2384 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/cao/ontologies/2021/5/SteelOntology"
+     xml:base="http://www.semanticweb.org/cao/ontologies/2021/5/SteelOntology"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:vann="http://purl.org/vocab/vann/"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:schema="http://schema.org/"
+     xmlns:Tatatology="http://www.semanticweb.org/sadee/ontologies/2021/1/Tatatology">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/cao/ontologies/CROS">
+        <owl:imports rdf:resource="http://www.semanticweb.org/sadee/ontologies/2021/1/Tatatology"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#Produces -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#Produces">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/cao/ontologies/CROS#SteelmakingProcess"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/cao/ontologies/CROS#SteelProduct"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#Uses -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#Uses">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/cao/ontologies/CROS#SteelmakingProcess"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/cao/ontologies/CROS#SteelmakingTool"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#UsesFuel -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#UsesFuel">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/cao/ontologies/CROS#SteelmakingProcess"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/cao/ontologies/CROS#Fuel"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#hasAlloyingElements -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#hasAlloyingElements">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/cao/ontologies/CROS#SteelProduct"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/cao/ontologies/CROS#AlloyingElements"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#hasByProduct -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#hasByProduct">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/cao/ontologies/CROS#SteelmakingProcess"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/cao/ontologies/CROS#SteelmakingByproduct"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#hasCapabilityModel -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#hasCapabilityModel">
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/ssn/System"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/cao/ontologies/CROS#SteelmakingCapabilityModel"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#hasCost -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#hasCost">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/cao/ontologies/CROS#SteelmakingProcess"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/cao/ontologies/CROS#Cost"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#hasGeospatialRegion -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#hasGeospatialRegion">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/cao/ontologies/CROS#Location"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/cao/ontologies/CROS#GeospatialRegion"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#hasImpurities -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#hasImpurities">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/cao/ontologies/CROS#SteelProduct"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/cao/ontologies/CROS#Impurities"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#hasInput -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#hasInput">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/cao/ontologies/CROS#SteelManufacturingResource"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/cao/ontologies/CROS#SteelmakingMaterial"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#hasObservation -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#hasObservation">
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/ssn/System"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/cao/ontologies/CROS#Observation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#hasObservedProperty -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#hasObservedProperty">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/cao/ontologies/CROS#Observation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#hasOutput -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#hasOutput">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/cao/ontologies/CROS#SteelmakingProcess"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/cao/ontologies/CROS#SteelProduct"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#hasParameter -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#hasParameter">
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/ssn/System"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/cao/ontologies/CROS#Parameter"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#hasStatus -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#hasStatus">
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/ssn/System"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/cao/ontologies/CROS#Status"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#hasThreat -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#hasThreat">
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/ssn/System"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/cao/ontologies/CROS#Threat"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#isManufacturedat -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#isManufacturedat">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/cao/ontologies/CROS#SteelProduct"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/cao/ontologies/CROS#SteelmakingFacility"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#isResponsiblefor -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#isResponsiblefor">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/cao/ontologies/CROS#Person"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/cao/ontologies/CROS#SteelmakingProcess"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#isUnderSituation -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#isUnderSituation">
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/ssn/System"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/cao/ontologies/CROS#Situation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#hasBlastHumidity -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#hasBlastHumidity">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/cao/ontologies/CROS#Furnace"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#hasBlastTemperature -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#hasBlastTemperature">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/cao/ontologies/CROS#Furnace"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#hasBlastVolume -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#hasBlastVolume">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/cao/ontologies/CROS#Furnace"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#hasCokeRate -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#hasCokeRate">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/cao/ontologies/CROS#Furnace"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#hasDirectReduction -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#hasDirectReduction">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/cao/ontologies/CROS#SteelmakingMaterial"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#hasDuctility -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#hasDuctility">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/cao/ontologies/CROS#SteelmakingMaterial"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#hasDurability -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#hasDurability">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/cao/ontologies/CROS#SteelProduct"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#hasLength -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#hasLength">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/cao/ontologies/CROS#SteelProduct"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#hasOxygenEnrichmentRate -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#hasOxygenEnrichmentRate">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/cao/ontologies/CROS#Furnace"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#hasPermeability -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#hasPermeability">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/cao/ontologies/CROS#SteelProduct"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#hasPulverizedCoalInjectionRate -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#hasPulverizedCoalInjectionRate">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/cao/ontologies/CROS#Furnace"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#hasRacewayFlameTemperature -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#hasRacewayFlameTemperature">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/cao/ontologies/CROS#GasBurner"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#hasSteamRate -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#hasSteamRate">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/cao/ontologies/CROS#Furnace"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#hasStrength -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#hasStrength">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/cao/ontologies/CROS#SteelProduct"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#hasTemperature -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#hasTemperature">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/cao/ontologies/CROS#SteelmakingTool"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#hasThermalLossesbyStave -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#hasThermalLossesbyStave">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/cao/ontologies/CROS#Furnace"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#hasThickness -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#hasThickness">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/cao/ontologies/CROS#SteelProduct"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#hasToughness -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#hasToughness">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/cao/ontologies/CROS#SteelProduct"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#hasWeight -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#hasWeight">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/cao/ontologies/CROS#SteelProduct"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#hasWeldability -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#hasWeldability">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/cao/ontologies/CROS#SteelmakingMaterial"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#hasWideness -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#hasWideness">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/cao/ontologies/CROS#SteelProduct"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#Accumulator -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#Accumulator">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cao/ontologies/CROS#SteelmakingTool"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#ActiveFault -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#ActiveFault">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cao/ontologies/CROS#Fault"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#Actuator -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#Actuator">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cao/ontologies/CROS#Device"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#AlloyToolSteel -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#AlloyToolSteel">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cao/ontologies/CROS#ToolandMoludSteel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#AlloyingElements -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#AlloyingElements"/>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#Annealing -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#Annealing">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cao/ontologies/CROS#SteelmakingProcess"/>
+        <rdfs:comment xml:lang="en">Annealing is a heat treatment process used mostly to increase the ductility and reduce the hardness of a material. This change in hardness and ductility is a result of the reduction of dislocations in the crystal structure of the material being annealed.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#Argon -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#Argon">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cao/ontologies/CROS#SteelmakingMaterial"/>
+        <rdfs:comment xml:lang="en">The chemical element of atomic number 18, an inert gaseous element of the noble gas group. Argon is the most common noble gas, making up nearly one percent of the earth&apos;s atmosphere.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#AusteniteFerriteStainlessSteel -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#AusteniteFerriteStainlessSteel">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cao/ontologies/CROS#StainlessSteel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#AusteniteHeatResistingSteel -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#AusteniteHeatResistingSteel">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cao/ontologies/CROS#HeatResistingSteel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#AusteniteStainlessSteel -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#AusteniteStainlessSteel">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cao/ontologies/CROS#StainlessSteel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#BOSVessel -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#BOSVessel">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cao/ontologies/CROS#SteelmakingFacility"/>
+        <rdfs:comment xml:lang="en">Basic Oxygen Steelmaking (BOS) vessels take a combined charge of scrap and liquid iron and convert this into steel.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#BallCutter -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#BallCutter">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cao/ontologies/CROS#MachiningTool"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#BasicOxygenSteelmaking -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#BasicOxygenSteelmaking">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cao/ontologies/CROS#SteelmakingProcess"/>
+        <rdfs:comment xml:lang="en">BOS is a method of primary steelmaking in which carbon-rich molten pig iron is made into steel. Blowing oxygen through molten pig iron lowers the carbon content of the alloy and changes it into low-carbon steel. The process is known as basic because fluxes of burnt lime or dolomite, which are chemical bases, are added to promote the removal of impurities and protect the lining of the converter.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#BearingSteel -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#BearingSteel">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cao/ontologies/CROS#MachineandPartsSteel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#Benzole -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#Benzole">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cao/ontologies/CROS#SteelmakingByproduct"/>
+        <rdfs:comment xml:lang="en">Benzole is a coal-tar product consisting mainly of benzene and toluene</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#Bin -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#Bin">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cao/ontologies/CROS#Equipement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#BlastFurnace -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#BlastFurnace">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cao/ontologies/CROS#SteelmakingFacility"/>
+        <rdfs:comment xml:lang="en">A type of metallurgical furnace used for smelting to produce industrial metals</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#Blending -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#Blending">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cao/ontologies/CROS#SteelmakingProcess"/>
+        <rdfs:comment xml:lang="en">Mix (different types of the same substance) together so as to make a steel product of the desired quality.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#Carbon -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#Carbon">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cao/ontologies/CROS#AlloyingElements"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#CarbonMonoxideGas -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#CarbonMonoxideGas">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cao/ontologies/CROS#Fuel"/>
+        <rdfs:comment xml:lang="en">Carbon monoxide (CO) is a colourless, odourless, tasteless, poisonous gas produced by incomplete burning of carbon-based fuels, including gas, oil, wood and coal.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#CarbonToolSteel -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#CarbonToolSteel">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cao/ontologies/CROS#ToolandMoludSteel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#CarburisingSteel -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#CarburisingSteel">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cao/ontologies/CROS#MachineandPartsSteel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#Caster -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#Caster">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cao/ontologies/CROS#SteelmakingFacility"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#Casting -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#Casting">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cao/ontologies/CROS#SteelmakingProcess"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#CentralMonitoringNode -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#CentralMonitoringNode">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cao/ontologies/CROS#Point"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#Centrifuge -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#Centrifuge">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cao/ontologies/CROS#Equipement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#ChemicalReduction -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#ChemicalReduction">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cao/ontologies/CROS#SteelmakingProcess"/>
+        <rdfs:comment xml:lang="en">A type of chemical reaction in which the oxidation states of atoms are changed.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#Chock -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#Chock">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cao/ontologies/CROS#SteelmakingTool"/>
+        <rdfs:comment xml:lang="en">A valve in the carburetor of a gasoline engine that is used to reduce the amount of air in the fuel mixture when the engine is started.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#Chromium -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#Chromium">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cao/ontologies/CROS#AlloyingElements"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#Coal -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#Coal">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cao/ontologies/CROS#Fuel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#Coating -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#Coating">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cao/ontologies/CROS#SteelmakingProcess"/>
+        <rdfs:comment xml:lang="en">A covering that is applied to the surface of an object, usually referred to as the substrate.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#Coke -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#Coke">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cao/ontologies/CROS#SteelmakingMaterial"/>
+        <rdfs:comment xml:lang="en">A solid fuel made by heating coal in the absence of air so that the volatile components are driven off.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#CokingCoal -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#CokingCoal">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cao/ontologies/CROS#Coal"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#ColdRolling -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#ColdRolling">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cao/ontologies/CROS#Rolling"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#ColdRollingMill -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#ColdRollingMill">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cao/ontologies/CROS#SteelmakingFacility"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#ColdWorkDieSteel -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#ColdWorkDieSteel">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cao/ontologies/CROS#ToolandMoludSteel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#ContactSensor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#ContactSensor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cao/ontologies/CROS#Sensor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#ContinuousCasting -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#ContinuousCasting">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cao/ontologies/CROS#SteelmakingProcess"/>
+        <rdfs:comment xml:lang="en">Continuous casting, also known as strand casting, is the process where a metal is heated until it liquefies. The molten metal is then allowed to solidify until it becomes a semi-finished slab that is later rolled in the finishing mill. It is used to cast metals of uninterrupted lengths.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#Coolant -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#Coolant">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cao/ontologies/CROS#SteelmakingMaterial"/>
+        <rdfs:comment xml:lang="en">A liquid or gas that is used to remove heat from something.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#Cooling -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#Cooling">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cao/ontologies/CROS#SteelmakingProcess"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#CoolingRate -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#CoolingRate">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#Cost -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#Cost"/>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#Device -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#Device">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cao/ontologies/CROS#PhysicalResource"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#Diameter -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#Diameter">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#DormantFault -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#DormantFault">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cao/ontologies/CROS#Fault"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#DovetailCutter -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#DovetailCutter">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cao/ontologies/CROS#MachiningTool"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#ElectricArcFurnace -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#ElectricArcFurnace">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cao/ontologies/CROS#Furnace"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#ElectricalSensor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#ElectricalSensor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cao/ontologies/CROS#Sensor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#EndMill -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#EndMill">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cao/ontologies/CROS#MachiningTool"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#Equipement -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#Equipement">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cao/ontologies/CROS#PhysicalResource"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#Error -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#Error">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cao/ontologies/CROS#Threat"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#ExcessCarbon -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#ExcessCarbon">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cao/ontologies/CROS#Impurities"/>
+        <rdfs:comment xml:lang="en">In steelmaking, impurities such as nitrogen, silicon, phosphorus, sulfur and excess carbon (the most important impurity) are removed from the sourced iron</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#Extrusion -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#Extrusion">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cao/ontologies/CROS#SteelmakingProcess"/>
+        <rdfs:comment xml:lang="en">Extrusion is a metal forming process in which metal or work piece is forced to flow through a die to reduce its cross section or convert it into desire shape. This process is extensively used in pipes and steel rods manufacturing. The force used to extrude the work piece is compressive in nature.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#FaceMill -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#FaceMill">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cao/ontologies/CROS#MachiningTool"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#Failure -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#Failure">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cao/ontologies/CROS#Threat"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#Fault -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#Fault">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cao/ontologies/CROS#Threat"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#FerriteHeatResistingSteel -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#FerriteHeatResistingSteel">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cao/ontologies/CROS#HeatResistingSteel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#FerritePearliteHeatResistingSteel -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#FerritePearliteHeatResistingSteel">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cao/ontologies/CROS#HeatResistingSteel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#FerriteStainlessSteel -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#FerriteStainlessSteel">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cao/ontologies/CROS#StainlessSteel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#FinancialResource -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#FinancialResource">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cao/ontologies/CROS#SteelManufacturingResource"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#Finishing -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#Finishing">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cao/ontologies/CROS#SteelmakingProcess"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#FinishingStand -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#FinishingStand">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cao/ontologies/CROS#SteelmakingFacility"/>
+        <rdfs:comment xml:lang="en">The last stand in a rolling mill, which determines the surface finish and final gauge.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#FlameSensor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#FlameSensor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cao/ontologies/CROS#Sensor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#FlawSensor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#FlawSensor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cao/ontologies/CROS#Sensor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#FlowSensor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#FlowSensor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cao/ontologies/CROS#Sensor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#Fluorspar -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#Fluorspar">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cao/ontologies/CROS#SteelmakingMaterial"/>
+        <rdfs:comment xml:lang="en">A mineral consisting of calcium fluoride which typically occurs as cubic crystals, colorless when pure but often colored by impurities.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#FlyCutter -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#FlyCutter">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cao/ontologies/CROS#MachiningTool"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#ForceSensor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#ForceSensor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cao/ontologies/CROS#Sensor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#Forging -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#Forging">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cao/ontologies/CROS#SteelmakingProcess"/>
+        <rdfs:comment xml:lang="en">Make or shape (a metal object) by heating it in a fire or furnace and beating or hammering it.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#Forming -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#Forming">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cao/ontologies/CROS#SteelmakingProcess"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#FractureToughness -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#FractureToughness">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#FreeCutrtingSteel -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#FreeCutrtingSteel">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cao/ontologies/CROS#MachineandPartsSteel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#Fuel -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#Fuel"/>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#Funnel -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#Funnel">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cao/ontologies/CROS#SteelmakingFacility"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#Furnace -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#Furnace"/>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#GasBurner -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#GasBurner">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cao/ontologies/CROS#SteelmakingTool"/>
+        <rdfs:comment xml:lang="en">A gas burner is a device that produces a controlled flame by mixing a fuel gas such as acetylene, natural gas, or propane with an oxidizer such as the ambient air or supplied oxygen, and allowing for ignition and combustion.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#GatewayNode -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#GatewayNode">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cao/ontologies/CROS#Point"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#Generator -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#Generator">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cao/ontologies/CROS#Equipement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#GeospatialRegion -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#GeospatialRegion"/>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#GraphiteElectrode -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#GraphiteElectrode">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cao/ontologies/CROS#SteelmakingTool"/>
+        <rdfs:comment xml:lang="en">Graphite electrodes serve to transfer the electrical energy from the power supply to the steel melt in the Electric Arc Furnace (EAF) bath.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#HardenedandTemperedSteel -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#HardenedandTemperedSteel">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cao/ontologies/CROS#MachineandPartsSteel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#Hardness -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#Hardness">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#HeatResistingSteel -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#HeatResistingSteel">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cao/ontologies/CROS#SteelProduct"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#HighCost -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#HighCost">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cao/ontologies/CROS#Cost"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#HighSpeedSteel -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#HighSpeedSteel">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cao/ontologies/CROS#ToolandMoludSteel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#HollowMill -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#HollowMill">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cao/ontologies/CROS#MachiningTool"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#HotRolling -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#HotRolling">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cao/ontologies/CROS#Rolling"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#HotRollingMill -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#HotRollingMill">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cao/ontologies/CROS#SteelmakingFacility"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#HotStripMill -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#HotStripMill">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cao/ontologies/CROS#SteelmakingFacility"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#HotWorkDieSteel -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#HotWorkDieSteel">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cao/ontologies/CROS#ToolandMoludSteel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#HumanResource -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#HumanResource">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cao/ontologies/CROS#SteelManufacturingResource"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#HumiditySensor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#HumiditySensor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cao/ontologies/CROS#Sensor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#Hydrogen -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#Hydrogen">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cao/ontologies/CROS#Fuel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#IEC -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#IEC">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cao/ontologies/CROS#Standard"/>
+        <rdfs:comment xml:lang="en">The International Electrotechnical Commission (IEC; in French: Commission électrotechnique internationale) is an international standards organization that prepares and publishes international standards for all electrical, electronic and related technologies – collectively known as &quot;electrotechnology&quot;.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#ISO -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#ISO">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cao/ontologies/CROS#Standard"/>
+        <rdfs:comment xml:lang="en">The International Organization for Standardization is an international standard-setting body composed of representatives from various national standards organizations.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#ImpactAbsorbingEnergy -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#ImpactAbsorbingEnergy">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#ImpactToughness -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#ImpactToughness">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#Impurities -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#Impurities"/>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#InvoluteGearCutter -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#InvoluteGearCutter">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cao/ontologies/CROS#MachiningTool"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#Iron -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#Iron">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cao/ontologies/CROS#SteelmakingMaterial"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#IronMaking -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#IronMaking">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cao/ontologies/CROS#SteelmakingProcess"/>
+        <rdfs:comment xml:lang="en">A smelting process to turn the ore into a form from which products can be fashioned.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#IronOre -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#IronOre">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cao/ontologies/CROS#SteelmakingMaterial"/>
+        <rdfs:comment xml:lang="en">Rocks and minerals from which metallic iron can be economically extracted.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#Joining -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#Joining">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cao/ontologies/CROS#SteelmakingProcess"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#Ladle -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#Ladle">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cao/ontologies/CROS#SteelmakingFacility"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#Lance -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#Lance">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cao/ontologies/CROS#SteelmakingTool"/>
+        <rdfs:comment xml:lang="en">A metal pipe supplying a jet of oxygen to a furnace or to a hot flame for cutting.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#Lathe -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#Lathe">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cao/ontologies/CROS#MachiningTool"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#LeakSensor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#LeakSensor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cao/ontologies/CROS#Sensor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#Length -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#Length">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#LevelSensor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#LevelSensor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cao/ontologies/CROS#Sensor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#Lift -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#Lift">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cao/ontologies/CROS#Equipement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#Limestone -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#Limestone">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cao/ontologies/CROS#SteelmakingMaterial"/>
+        <rdfs:comment xml:lang="en">Limestone is used to remove impurities from the blast furnace when making iron.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#Location -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#Location"/>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#LogisticProcess -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#LogisticProcess">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cao/ontologies/CROS#SteelmakingProcess"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#LowCarbonMartensiticSteel -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#LowCarbonMartensiticSteel">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cao/ontologies/CROS#MachineandPartsSteel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#LowCost -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#LowCost">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cao/ontologies/CROS#Cost"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#MachineandPartsSteel -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#MachineandPartsSteel">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cao/ontologies/CROS#SteelProduct"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#MachineryFeature -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#MachineryFeature">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/FeatureOfInterest"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#Machining -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#Machining">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cao/ontologies/CROS#SteelmakingProcess"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#MachiningTool -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#MachiningTool">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cao/ontologies/CROS#PhysicalResource"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#Maintenance -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#Maintenance">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cao/ontologies/CROS#SteelmakingProcess"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#Manganese -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#Manganese">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cao/ontologies/CROS#AlloyingElements"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#MartensiteStainlessSteel -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#MartensiteStainlessSteel">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cao/ontologies/CROS#StainlessSteel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#MastensiteHeatResistingSteel -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#MastensiteHeatResistingSteel">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cao/ontologies/CROS#HeatResistingSteel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#MaterialsHandlingEquipment -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#MaterialsHandlingEquipment">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cao/ontologies/CROS#Equipement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#MediumCost -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#MediumCost">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cao/ontologies/CROS#Cost"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#MetalSensor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#MetalSensor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cao/ontologies/CROS#Sensor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#Mixer -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#Mixer">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cao/ontologies/CROS#Equipement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#Mold -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#Mold">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cao/ontologies/CROS#SteelmakingFacility"/>
+        <rdfs:comment xml:lang="en">A hollow container used to give shape to molten or hot liquid material</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#MoltenIron -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#MoltenIron">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cao/ontologies/CROS#SteelmakingMaterial"/>
+        <rdfs:comment xml:lang="en">Molten Iron is a liquid material that is created by smelting Iron Ingots or other Iron items from a Smeltery Controller.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#MoltenSteel -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#MoltenSteel">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cao/ontologies/CROS#SteelmakingMaterial"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#MotionSensor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#MotionSensor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cao/ontologies/CROS#Sensor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#Moulding -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#Moulding">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cao/ontologies/CROS#SteelmakingProcess"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#Nickel -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#Nickel">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cao/ontologies/CROS#AlloyingElements"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#NitringSteel -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#NitringSteel">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cao/ontologies/CROS#MachineandPartsSteel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#Nitrogen -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#Nitrogen">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cao/ontologies/CROS#Impurities"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#Non-ContactSensor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#Non-ContactSensor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cao/ontologies/CROS#Sensor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#Observation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#Observation"/>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#OilFurnace -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#OilFurnace">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cao/ontologies/CROS#Furnace"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#Oxidation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#Oxidation">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cao/ontologies/CROS#SteelmakingProcess"/>
+        <rdfs:comment xml:lang="en">Oxidation is the loss of electrons during a reaction by a molecule, atom or ion. Oxidation occurs when the oxidation state of a molecule, atom or ion is increased.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#Oxygen -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#Oxygen">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cao/ontologies/CROS#Fuel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#OxygenFurnace -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#OxygenFurnace">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cao/ontologies/CROS#Furnace"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#P.HStainlessSteel -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#P.HStainlessSteel">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cao/ontologies/CROS#StainlessSteel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#PackagingMachinery -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#PackagingMachinery">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cao/ontologies/CROS#Equipement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#Parameter -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#Parameter"/>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#ParticleSensor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#ParticleSensor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cao/ontologies/CROS#Sensor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#PercentageElongation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#PercentageElongation">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#Person -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#Person"/>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#Phosphorus -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#Phosphorus">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cao/ontologies/CROS#Impurities"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#PhotoelectricSensor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#PhotoelectricSensor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cao/ontologies/CROS#Sensor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#PhysicalResource -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#PhysicalResource">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cao/ontologies/CROS#SteelManufacturingResource"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#PickleLine -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#PickleLine">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cao/ontologies/CROS#SteelmakingFacility"/>
+        <rdfs:comment xml:lang="en">Prior to cold rolling operation, hot rolled steel is normally passed through a pickling line so as to eradicate the scale from the surface.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#PlasticWorkDieSteel -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#PlasticWorkDieSteel">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cao/ontologies/CROS#ToolandMoludSteel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#Point -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#Point">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cao/ontologies/CROS#GeospatialRegion"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#PositionSensor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#PositionSensor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cao/ontologies/CROS#Sensor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#PressureSensor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#PressureSensor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cao/ontologies/CROS#Sensor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#Propane -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#Propane">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cao/ontologies/CROS#Furnace"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#ProximitySensor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#ProximitySensor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cao/ontologies/CROS#Sensor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#Rack -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#Rack">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cao/ontologies/CROS#Storage_component"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#Rack_Stand -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#Rack_Stand">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cao/ontologies/CROS#Storage_component"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#RadiationSensor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#RadiationSensor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cao/ontologies/CROS#Sensor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#Recycling -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#Recycling">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cao/ontologies/CROS#SteelmakingProcess"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#ReductionInCrossSection -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#ReductionInCrossSection">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#Rolling -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#Rolling">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cao/ontologies/CROS#SteelmakingProcess"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#RollingMillStands -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#RollingMillStands">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cao/ontologies/CROS#SteelmakingTool"/>
+        <rdfs:comment xml:lang="en">The steel roughing rolling mill stands are used to reduce the thickness of the steel while at the same time extending the overall length. Steel Roughing rolling mill stand is an important part of a work stand, roll bearing chock and roller adjustment device is installed on the frame.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#RoughingEndMill -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#RoughingEndMill">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cao/ontologies/CROS#MachiningTool"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#RoughingStand -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#RoughingStand">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cao/ontologies/CROS#SteelmakingFacility"/>
+        <rdfs:comment xml:lang="en">The first rolling stand through which metal passes during hot rolling. Once reduced by the roughing stands, the metal continues on to the finishing stands where smoother rolls with a smaller gap are used to complete the hot roll process.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#SeamlessTube -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#SeamlessTube">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cao/ontologies/CROS#SteelTube"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#SecondarySteelmaking -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#SecondarySteelmaking">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cao/ontologies/CROS#SteelmakingProcess"/>
+        <rdfs:comment xml:lang="en">Also known as electric arc furnace steelmaking, secondary steelmaking lives up to its namesake by relying on an electric arc to melt scrap iron. After the scrap iron has been melted, it&apos;s mixed with carbon and converted into steel. With secondary steelmaking, a refractory-lined vessel is used as the furnace.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#Sensor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#Sensor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cao/ontologies/CROS#Device"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#ShellMill -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#ShellMill">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cao/ontologies/CROS#MachiningTool"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#Shredder -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#Shredder">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cao/ontologies/CROS#Equipement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#Side-and-faceCutter -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#Side-and-faceCutter">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cao/ontologies/CROS#MachiningTool"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#Silicon -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#Silicon">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cao/ontologies/CROS#Impurities"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#Sinter -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#Sinter">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cao/ontologies/CROS#SteelmakingMaterial"/>
+        <rdfs:comment xml:lang="en">Solid material which has been sintered, especially a mixture of iron ore and other materials prepared for smelting.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#Sintering -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#Sintering">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cao/ontologies/CROS#SteelmakingProcess"/>
+        <rdfs:comment xml:lang="en">Make (a powdered material) coalesce into a solid or porous mass by heating it (and usually also compressing it) without liquefaction.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#Situation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#Situation"/>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#Sizing -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#Sizing">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cao/ontologies/CROS#SteelmakingProcess"/>
+        <rdfs:comment xml:lang="en">To slightly reduce the outside diameter of a tube to the required dimensions.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#SlabMill -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#SlabMill">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cao/ontologies/CROS#MachiningTool"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#Slag -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#Slag">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cao/ontologies/CROS#SteelmakingMaterial"/>
+        <rdfs:comment xml:lang="en">Stony waste matter separated from metals during the smelting or refining of ore.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#SpaceRegion -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#SpaceRegion">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cao/ontologies/CROS#GeospatialRegion"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#SpringSteel -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#SpringSteel">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cao/ontologies/CROS#MachineandPartsSteel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#Squeezing -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#Squeezing">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cao/ontologies/CROS#SteelmakingProcess"/>
+        <rdfs:comment xml:lang="en">Squeezing is a manufacturing method that combines die casting and forging to create stronger metal alloys for use in construction and defense industries.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#StainlessSteel -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#StainlessSteel">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cao/ontologies/CROS#SteelProduct"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#Standard -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#Standard"/>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#Status -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#Status"/>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#SteelCoil -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#SteelCoil">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cao/ontologies/CROS#SteelProduct"/>
+        <rdfs:comment xml:lang="en">Steel coil is sheet metal supplied in coil form. Depending on the production method, such coil is classified as hot-rolled, cold-rolled, galvanised or polymer-coated . Steel coil is used across industry, the main consumers being the construction and machine-building sectors.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#SteelManufacturingResource -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#SteelManufacturingResource"/>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#SteelProduct -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#SteelProduct"/>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#SteelScrap -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#SteelScrap">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cao/ontologies/CROS#SteelmakingMaterial"/>
+        <rdfs:comment xml:lang="en">Steel scrap consists of discarded steel or steel products, generally segregated by composition and size or &apos;grade&apos; suitable for melting.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#SteelShaping -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#SteelShaping">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cao/ontologies/CROS#SteelmakingProcess"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#SteelSheet -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#SteelSheet">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cao/ontologies/CROS#SteelProduct"/>
+        <rdfs:comment xml:lang="en">Steel sheet is steel formed by an industrial process into thin, flat pieces. Steel sheet is one of the fundamental forms used in steelmaking.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#SteelSlab -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#SteelSlab">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cao/ontologies/CROS#SteelProduct"/>
+        <rdfs:comment xml:lang="en">Steel slab is a thick flat steel sheet rolled and cooled from the Continuous Casting Machine (CCM) machine, it can be further processed. Includes use in the following sectors: structural steels, shipbuilding, pipes, pressure vessels, boilers, heavy metal structures, offshore structures, etc. The typical thickness of 200 to 240 mm.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#SteelStrand -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#SteelStrand">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cao/ontologies/CROS#SteelProduct"/>
+        <rdfs:comment xml:lang="en">Many individual steel wires are helically-laid together to form a wire rope. A strand is when two or more wires are wound concentrically in a helix. These strands are typically wound around a center wire and then around the core. The lay of the strand is the direction that the wires orbit the core.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#SteelTube -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#SteelTube">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cao/ontologies/CROS#SteelmakingTool"/>
+        <rdfs:comment xml:lang="en">Steel tube is also often referred to as poles, or pipes; which term is used usually refers to the application it is being used for.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#SteelmakingByproduct -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#SteelmakingByproduct"/>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#SteelmakingCapabilityModel -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#SteelmakingCapabilityModel"/>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#SteelmakingFacility -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#SteelmakingFacility"/>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#SteelmakingMaterial -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#SteelmakingMaterial"/>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#SteelmakingProcess -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#SteelmakingProcess"/>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#SteelmakingTool -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#SteelmakingTool"/>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#Storage -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#Storage">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cao/ontologies/CROS#SteelmakingFacility"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#Storage_Roll -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#Storage_Roll">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cao/ontologies/CROS#Storage_component"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#Storage_component -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#Storage_component">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cao/ontologies/CROS#Storage"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#StrainRate -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#StrainRate">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#StructuralSteel -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#StructuralSteel">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cao/ontologies/CROS#SteelProduct"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#Sulfur -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#Sulfur">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cao/ontologies/CROS#Impurities"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#SuperStrengthStainlessSteel -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#SuperStrengthStainlessSteel">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cao/ontologies/CROS#StainlessSteel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#SuperStrengthSteel -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#SuperStrengthSteel">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cao/ontologies/CROS#MachineandPartsSteel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#Tank -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#Tank">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cao/ontologies/CROS#Equipement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#Tapping -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#Tapping">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cao/ontologies/CROS#SteelmakingProcess"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#Tar -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#Tar">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cao/ontologies/CROS#SteelmakingByproduct"/>
+        <rdfs:comment xml:lang="en">A dark, thick, flammable liquid distilled from wood or coal, consisting of a mixture of hydrocarbons, resins, alcohols, and other compounds. It is used in roadmaking and for coating and preserving timber.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#Temperature -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#Temperature">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#TemperatureSensor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#TemperatureSensor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cao/ontologies/CROS#Sensor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#Tempering -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#Tempering">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cao/ontologies/CROS#SteelmakingProcess"/>
+        <rdfs:comment xml:lang="en">To improve the hardness and elasticity of (steel or other metal) by reheating and then cooling it.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#TensileStrength -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#TensileStrength">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#Thickness -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#Thickness">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#Threat -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#Threat"/>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#TimetoRupture -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#TimetoRupture">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#TimetoTotalStrian -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#TimetoTotalStrian">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#Tinning -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#Tinning">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cao/ontologies/CROS#SteelmakingProcess"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#ToolandMoludSteel -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#ToolandMoludSteel">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cao/ontologies/CROS#SteelProduct"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#Tundish -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#Tundish">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cao/ontologies/CROS#SteelmakingFacility"/>
+        <rdfs:comment xml:lang="en">In continuous casting of steel, a tundish traditionally refers to an intermediate vessel placed between the ladle and the mold, designed to supply and distribute molten steel to different continuous casting molds at a near constant rate.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#Tuyeres -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#Tuyeres">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cao/ontologies/CROS#SteelmakingTool"/>
+        <rdfs:comment xml:lang="en">A nozzle through which air is forced into a smelter, furnace, or forge.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#VacuumDegasser -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#VacuumDegasser">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cao/ontologies/CROS#SteelmakingFacility"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#Vanadium -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#Vanadium">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cao/ontologies/CROS#AlloyingElements"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#Weight -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#Weight">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#WeldedTube -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#WeldedTube">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cao/ontologies/CROS#SteelTube"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#Wideness -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#Wideness">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#WoodRuffCutter -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#WoodRuffCutter">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cao/ontologies/CROS#MachiningTool"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#YieldStrength -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#YieldStrength">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#Chillers/RefrigerationEquipment -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#Chillers/RefrigerationEquipment">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cao/ontologies/CROS#Equipement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#Compressor/Pump -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#Compressor/Pump">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cao/ontologies/CROS#Equipement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#Gas/ChemicalSensor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#Gas/ChemicalSensor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cao/ontologies/CROS#Sensor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#Labeling/Painting -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#Labeling/Painting">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cao/ontologies/CROS#SteelmakingProcess"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cao/ontologies/CROS#Vision/ImagingSensor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cao/ontologies/CROS#Vision/ImagingSensor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cao/ontologies/CROS#Sensor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sadee/ontologies/2021/1/Tatatology#Cold_Rolling_Mill -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sadee/ontologies/2021/1/Tatatology#Cold_Rolling_Mill">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sadee/ontologies/2021/1/Tatatology#SteelMill"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sadee/ontologies/2021/1/Tatatology#Mill_Component -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sadee/ontologies/2021/1/Tatatology#Mill_Component">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sadee/ontologies/2021/1/Tatatology#SteelMill"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sadee/ontologies/2021/1/Tatatology#Pickle_Line_Component -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sadee/ontologies/2021/1/Tatatology#Pickle_Line_Component">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cao/ontologies/CROS#PickleLine"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sadee/ontologies/2021/1/Tatatology#Roll_Grinding -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sadee/ontologies/2021/1/Tatatology#Roll_Grinding">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sadee/ontologies/2021/1/Tatatology#SteelRoll"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sadee/ontologies/2021/1/Tatatology#Roll_Refurbishment -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sadee/ontologies/2021/1/Tatatology#Roll_Refurbishment">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sadee/ontologies/2021/1/Tatatology#SteelRoll"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sadee/ontologies/2021/1/Tatatology#SteelMill -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sadee/ontologies/2021/1/Tatatology#SteelMill">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cao/ontologies/CROS#SteelmakingTool"/>
+        <rdfs:comment xml:lang="en">A steel mill or steelworks is an industrial plant for the manufacture of steel.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sadee/ontologies/2021/1/Tatatology#SteelPlant -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sadee/ontologies/2021/1/Tatatology#SteelPlant">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cao/ontologies/CROS#SteelmakingFacility"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sadee/ontologies/2021/1/Tatatology#SteelRoll -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sadee/ontologies/2021/1/Tatatology#SteelRoll">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cao/ontologies/CROS#SteelmakingTool"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/ns/sosa/FeatureOfInterest -->
+
+    <owl:Class rdf:about="http://www.w3.org/ns/sosa/FeatureOfInterest"/>
+    
+
+
+    <!-- http://www.w3.org/ns/sosa/ObservableProperty -->
+
+    <owl:Class rdf:about="http://www.w3.org/ns/sosa/ObservableProperty"/>
+    
+
+
+    <!-- http://www.w3.org/ns/ssn/System -->
+
+    <owl:Class rdf:about="http://www.w3.org/ns/ssn/System"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

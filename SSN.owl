@@ -1,0 +1,306 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.w3.org/ns/ssn/"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://www.w3.org/ns/ssn/">
+    <Prefix name="" IRI="http://www.w3.org/ns/ssn/"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="ssn" IRI="http://www.w3.org/ns/ssn/"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="foaf" IRI="http://xmlns.com/foaf/0.1/"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Prefix name="skos" IRI="http://www.w3.org/2004/02/skos/core#"/>
+    <Prefix name="sosa" IRI="http://www.w3.org/ns/sosa/"/>
+    <Prefix name="time" IRI="http://www.w3.org/2006/time#"/>
+    <Prefix name="vann" IRI="http://purl.org/vocab/vann/"/>
+    <Prefix name="voaf" IRI="http://purl.org/vocommons/voaf#"/>
+    <Prefix name="schema" IRI="http://schema.org/"/>
+    <Prefix name="dcterms" IRI="http://purl.org/dc/terms/"/>
+    <Import>http://www.w3.org/ns/sosa/</Import>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dcterms:created"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#date">2017-04-17</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dcterms:creator"/>
+        <AnonymousIndividual nodeID="_:genid2147483729"/>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dcterms:description"/>
+        <Literal xml:lang="en">This ontology describes sensors, actuators and observations, and related concepts. It does not describe domain concepts, time, locations, etc. these are intended to be included from other ontologies via OWL imports.</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dcterms:license"/>
+        <IRI>http://www.opengeospatial.org/ogc/Software</IRI>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dcterms:license"/>
+        <IRI>http://www.w3.org/Consortium/Legal/2015/copyright-software-and-document</IRI>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dcterms:rights"/>
+        <Literal>Copyright 2017 W3C/OGC.</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dcterms:title"/>
+        <Literal xml:lang="en">Semantic Sensor Network Ontology</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="vann:preferredNamespacePrefix"/>
+        <Literal>ssn</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="vann:preferredNamespaceUri"/>
+        <Literal>http://www.w3.org/ns/ssn/</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <Literal xml:lang="en">Please report any errors to the W3C Spatial Data on the Web Working Group via the SDW WG Public List public-sdw-wg@w3.org</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <IRI>https://www.w3.org/2015/spatial/wiki/Semantic_Sensor_Network_Ontology</IRI>
+    </Annotation>
+    <Declaration>
+        <Class abbreviatedIRI="sosa:Actuation"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="sosa:Observation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Deployment"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="MProperty"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Stimulus"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="System"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI=""/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="dcterms:created"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="dcterms:creator"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="dcterms:description"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="dcterms:license"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="dcterms:rights"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="dcterms:title"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="vann:preferredNamespacePrefix"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="vann:preferredNamespaceUri"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="skos:example"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="foaf:name"/>
+    </Declaration>
+    <SubClassOf>
+        <Class abbreviatedIRI="sosa:ActuatableProperty"/>
+        <Class IRI="MProperty"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="sosa:Actuator"/>
+        <Class IRI="System"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="sosa:ObservableProperty"/>
+        <Class IRI="MProperty"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="sosa:Sample"/>
+        <Class abbreviatedIRI="sosa:FeatureOfInterest"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="sosa:Sample"/>
+        <Class abbreviatedIRI="sosa:Result"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="sosa:Sampler"/>
+        <Class IRI="System"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="sosa:Sensor"/>
+        <Class IRI="System"/>
+    </SubClassOf>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>sosa:ActuatableProperty</AbbreviatedIRI>
+        <AbbreviatedIRI>sosa:</AbbreviatedIRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>sosa:Actuation</AbbreviatedIRI>
+        <AbbreviatedIRI>sosa:</AbbreviatedIRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>sosa:Actuator</AbbreviatedIRI>
+        <AbbreviatedIRI>sosa:</AbbreviatedIRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>sosa:FeatureOfInterest</AbbreviatedIRI>
+        <AbbreviatedIRI>sosa:</AbbreviatedIRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>sosa:ObservableProperty</AbbreviatedIRI>
+        <AbbreviatedIRI>sosa:</AbbreviatedIRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>sosa:Observation</AbbreviatedIRI>
+        <AbbreviatedIRI>sosa:</AbbreviatedIRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>sosa:Platform</AbbreviatedIRI>
+        <AbbreviatedIRI>sosa:</AbbreviatedIRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>sosa:Result</AbbreviatedIRI>
+        <AbbreviatedIRI>sosa:</AbbreviatedIRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>sosa:Sample</AbbreviatedIRI>
+        <AbbreviatedIRI>sosa:</AbbreviatedIRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>sosa:Sampler</AbbreviatedIRI>
+        <AbbreviatedIRI>sosa:</AbbreviatedIRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>sosa:Sensor</AbbreviatedIRI>
+        <AbbreviatedIRI>sosa:</AbbreviatedIRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>Deployment</IRI>
+        <Literal xml:lang="en">Describes the Deployment of one or more Systems for a particular purpose. Deployment may be done on a Platform.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>Deployment</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Deployment</IRI>
+        <Literal xml:lang="en">Deployment</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>Deployment</IRI>
+        <Literal xml:lang="en">Describes the Deployment of one or more Systems for a particular purpose. Deployment may be done on a Platform.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:example"/>
+        <IRI>Deployment</IRI>
+        <Literal xml:lang="en">For example, a temperature Sensor deployed on a wall, or a whole network of Sensors deployed for an Observation campaign.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>MProperty</IRI>
+        <Literal xml:lang="en">A quality of an entity. An aspect of an entity that is intrinsic to and cannot exist without the entity.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>MProperty</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>MProperty</IRI>
+        <Literal xml:lang="en">Property</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>MProperty</IRI>
+        <Literal xml:lang="en">A quality of an entity. An aspect of an entity that is intrinsic to and cannot exist without the entity.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>Stimulus</IRI>
+        <Literal xml:lang="en">An event in the real world that &apos;triggers&apos; the Sensor. The properties associated to the Stimulus may be different to the eventual observed ObservableProperty. It is the event, not the object, that triggers the Sensor.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>Stimulus</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Stimulus</IRI>
+        <Literal xml:lang="en">Stimulus</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>Stimulus</IRI>
+        <Literal xml:lang="en">An event in the real world that &apos;triggers&apos; the Sensor. The properties associated to the Stimulus may be different to the eventual observed ObservableProperty. It is the event, not the object, that triggers the Sensor.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>System</IRI>
+        <Literal xml:lang="en">System is a unit of abstraction for pieces of infrastructure that implement Procedures. A System may have components, its subsystems, which are other systems.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>System</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>System</IRI>
+        <Literal xml:lang="en">System</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>System</IRI>
+        <Literal xml:lang="en">System is a unit of abstraction for pieces of infrastructure that implement Procedures. A System may have components, its subsystems, which are other systems.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="foaf:name"/>
+        <AnonymousIndividual nodeID="_:genid2147483726"/>
+        <Literal xml:lang="en">W3C/OGC Spatial Data on the Web Working Group</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="foaf:name"/>
+        <AnonymousIndividual nodeID="_:genid2147483727"/>
+        <Literal xml:lang="en">W3C/OGC Spatial Data on the Web Working Group</Literal>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

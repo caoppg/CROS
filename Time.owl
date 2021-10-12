@@ -1,0 +1,956 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.w3.org/2006/time#"
+     xml:base="http://www.w3.org/2006/time"
+     xmlns:dct="http://purl.org/dc/terms/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+    <owl:Ontology rdf:about="http://www.w3.org/2006/time">
+        <owl:versionIRI rdf:resource="http://www.w3.org/2006/time#2016"/>
+        <dct:contributor rdf:resource="https://orcid.org/0000-0001-8269-8171"/>
+        <dct:contributor rdf:resource="mailto:chris.little@metoffice.gov.uk"/>
+        <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2006-09-27</dct:created>
+        <dct:creator rdf:resource="http://orcid.org/0000-0002-3884-3420"/>
+        <dct:creator rdf:resource="https://en.wikipedia.org/wiki/Jerry_Hobbs"/>
+        <dct:creator rdf:resource="mailto:panfeng66@gmail.com"/>
+        <dct:isVersionOf rdf:resource="http://www.w3.org/TR/owl-time"/>
+        <dct:license rdf:resource="https://creativecommons.org/licenses/by/4.0/"/>
+        <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2017-04-06</dct:modified>
+        <dct:rights xml:lang="en">Copyright © 2006-2017 W3C, OGC. W3C and OGC liability, trademark and document use rules apply.</dct:rights>
+        <rdfs:label xml:lang="en">OWL-Time</rdfs:label>
+        <rdfs:label xml:lang="es">Tiempo en OWL</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://dx.doi.org/10.3233/SW-150187"/>
+        <rdfs:seeAlso rdf:resource="http://www.semantic-web-journal.net/content/time-ontology-extended-non-gregorian-calendar-applications"/>
+        <rdfs:seeAlso rdf:resource="http://www.w3.org/TR/owl-time"/>
+        <owl:priorVersion rdf:resource="http://www.w3.org/2006/time#2006"/>
+        <skos:changeNote>2016-06-15 - initial update of OWL-Time - modified to support arbitrary temporal reference systems. </skos:changeNote>
+        <skos:changeNote>2016-12-20 - adjust range of time:timeZone to time:TimeZone, moved up from the tzont ontology.  </skos:changeNote>
+        <skos:changeNote>2016-12-20 - restore time:Year and time:January which were present in the 2006 version of the ontology, but now marked &quot;deprecated&quot;. </skos:changeNote>
+        <skos:changeNote>2017-02 - intervalIn, intervalDisjoint, monthOfYear added; TemporalUnit subclass of TemporalDuration</skos:changeNote>
+        <skos:changeNote>2017-04-06 - hasTime, hasXSDDuration added; Number removed; all duration elements changed to xsd:decimal</skos:changeNote>
+        <skos:historyNote xml:lang="en">Update of OWL-Time ontology, extended to support general temporal reference systems. 
+
+Ontology engineering by Simon J D Cox</skos:historyNote>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/dc/terms/contributor -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/contributor"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/created -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/created"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/creator -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/creator"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/isVersionOf -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/isVersionOf"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/license -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/license"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/modified -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/modified"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/rights -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/rights"/>
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#pattern -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2001/XMLSchema#pattern"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#changeNote -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#changeNote"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#definition -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#definition"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#editorialNote -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#editorialNote"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#historyNote -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#historyNote"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#note -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#note"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#prefLabel -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#prefLabel"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#scopeNote -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#scopeNote"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#duration -->
+
+    <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#duration"/>
+    
+
+
+    <!-- http://www.w3.org/2006/time#generalDay -->
+
+    <rdfs:Datatype rdf:about="http://www.w3.org/2006/time#generalDay">
+        <rdfs:comment xml:lang="en">Day of month - formulated as a text string with a pattern constraint to reproduce the same lexical form as gDay, except that values up to 99 are permitted, in order to support calendars with more than 31 days in a month. 
+Note that the value-space is not defined, so a generic OWL2 processor cannot compute ordering relationships of values of this type.</rdfs:comment>
+        <rdfs:comment xml:lang="es">Día del mes - formulado como una cadena de texto con una restricción patrón para reproducir la misma forma léxica que gDay, excepto que se permiten valores hasta el 99, con el propósito de proporcionar soporte a calendarios con meses con más de 31 días.
+            Nótese que el espacio de valores no está definido, por tanto, un procesador genérico de OWL2 no puede computar relaciones de orden de valores de este tipo.</rdfs:comment>
+        <rdfs:label xml:lang="es">Día generalizado</rdfs:label>
+        <rdfs:label xml:lang="en">Generalized day</rdfs:label>
+        <skos:definition xml:lang="en">Day of month - formulated as a text string with a pattern constraint to reproduce the same lexical form as gDay, except that values up to 99 are permitted, in order to support calendars with more than 31 days in a month. 
+Note that the value-space is not defined, so a generic OWL2 processor cannot compute ordering relationships of values of this type.</skos:definition>
+        <skos:definition xml:lang="es">Día del mes - formulado como una cadena de texto con una restricción patrón para reproducir la misma forma léxica que gDay, excepto que se permiten valores hasta el 99, con el propósito de proporcionar soporte a calendarios con meses con más de 31 días.
+            Nótese que el espacio de valores no está definido, por tanto, un procesador genérico de OWL2 no puede computar relaciones de orden de valores de este tipo.</skos:definition>
+    </rdfs:Datatype>
+    
+
+
+    <!-- http://www.w3.org/2006/time#generalMonth -->
+
+    <rdfs:Datatype rdf:about="http://www.w3.org/2006/time#generalMonth">
+        <rdfs:comment xml:lang="es">Mes del año - formulado como una cadena de texto con una restricción patrón para reproducir la misma forma léxica que gMonth, excepto que se permiten valores hasta el 20, con el propósito de proporcionar soporte a calendarios con años con más de 12 meses.
+            Nótese que el espacio de valores no está definido, por tanto, un procesador genérico de OWL2 no puede computar relaciones de orden de valores de este tipo.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Month of year - formulated as a text string with a pattern constraint to reproduce the same lexical form as gMonth, except that values up to 20 are permitted, in order to support calendars with more than 12 months in the year. 
+Note that the value-space is not defined, so a generic OWL2 processor cannot compute ordering relationships of values of this type.</rdfs:comment>
+        <rdfs:label xml:lang="en">Generalized month</rdfs:label>
+        <rdfs:label xml:lang="es">Mes generalizado</rdfs:label>
+        <skos:definition xml:lang="es">Mes del año - formulado como una cadena de texto con una restricción patrón para reproducir la misma forma léxica que gMonth, excepto que se permiten valores hasta el 20, con el propósito de proporcionar soporte a calendarios con años con más de 12 meses.
+            Nótese que el espacio de valores no está definido, por tanto, un procesador genérico de OWL2 no puede computar relaciones de orden de valores de este tipo.</skos:definition>
+        <skos:definition xml:lang="en">Month of year - formulated as a text string with a pattern constraint to reproduce the same lexical form as gMonth, except that values up to 20 are permitted, in order to support calendars with more than 12 months in the year. 
+Note that the value-space is not defined, so a generic OWL2 processor cannot compute ordering relationships of values of this type.</skos:definition>
+    </rdfs:Datatype>
+    
+
+
+    <!-- http://www.w3.org/2006/time#generalYear -->
+
+    <rdfs:Datatype rdf:about="http://www.w3.org/2006/time#generalYear">
+        <rdfs:comment xml:lang="es">Número de año - formulado como una cadena de texto con una restricción patrón para reproducir la misma forma léxica que gYear, aunque no está restringido a valores del calendario gregoriano.
+            Nótese que el espacio de valores no está definido, por tanto, un procesador genérico de OWL2 no puede computar relaciones de orden de valores de este tipo.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Year number - formulated as a text string with a pattern constraint to reproduce the same lexical form as gYear, but not restricted to values from the Gregorian calendar. 
+Note that the value-space is not defined, so a generic OWL2 processor cannot compute ordering relationships of values of this type.</rdfs:comment>
+        <rdfs:label xml:lang="es">Año generalizado</rdfs:label>
+        <rdfs:label xml:lang="en">Generalized year</rdfs:label>
+        <skos:definition xml:lang="es">Número de año - formulado como una cadena de texto con una restricción patrón para reproducir la misma forma léxica que gYear, aunque no está restringido a valores del calendario gregoriano.
+            Nótese que el espacio de valores no está definido, por tanto, un procesador genérico de OWL2 no puede computar relaciones de orden de valores de este tipo.</skos:definition>
+        <skos:definition xml:lang="en">Year number - formulated as a text string with a pattern constraint to reproduce the same lexical form as gYear, but not restricted to values from the Gregorian calendar. 
+Note that the value-space is not defined, so a generic OWL2 processor cannot compute ordering relationships of values of this type.</skos:definition>
+    </rdfs:Datatype>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/2006/time#hasXSDDuration -->
+
+    <owl:DatatypeProperty rdf:about="http://www.w3.org/2006/time#hasXSDDuration">
+        <rdfs:domain rdf:resource="http://www.w3.org/2006/time#TemporalEntity"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#duration"/>
+        <rdfs:comment xml:lang="es">Extensión de una entidad temporal, expresada utilizando xsd:duration.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Extent of a temporal entity, expressed using xsd:duration</rdfs:comment>
+        <rdfs:label xml:lang="en">has XSD duration</rdfs:label>
+        <rdfs:label xml:lang="es">tiene duración XSD</rdfs:label>
+        <skos:definition xml:lang="es">Extensión de una entidad temporal, expresada utilizando xsd:duration.</skos:definition>
+        <skos:definition xml:lang="en">Extent of a temporal entity, expressed using xsd:duration</skos:definition>
+        <skos:editorialNote xml:lang="es">Característica arriesgada - añadida en la revisión de 2017, y todavía no ampliamente utilizada.</skos:editorialNote>
+        <skos:editorialNote xml:lang="en">Feature at risk - added in 2017 revision, and not yet widely used. </skos:editorialNote>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/2006/time#DateTimeDescription -->
+
+    <owl:Class rdf:about="http://www.w3.org/2006/time#DateTimeDescription">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2006/time#GeneralDateTimeDescription"/>
+        <rdfs:comment xml:lang="es">Descripción de fecha y tiempo estructurada con valores separados para los diferentes elementos de un sistema calendario-reloj. El sistema de referencia temporal está fijado al calendario gregoriano, y el rango de las propiedades año, mes, día restringidas a los correspondientes tipos del XML Schema xsd:gYear, xsd:gMonth y xsd:gDay respectivamente.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Description of date and time structured with separate values for the various elements of a calendar-clock system. The temporal reference system is fixed to Gregorian Calendar, and the range of year, month, day properties restricted to corresponding XML Schema types xsd:gYear, xsd:gMonth and xsd:gDay, respectively.</rdfs:comment>
+        <rdfs:label xml:lang="en">Date-Time description</rdfs:label>
+        <rdfs:label xml:lang="es">descripción de fecha-tiempo</rdfs:label>
+        <skos:definition xml:lang="es">Descripción de fecha y tiempo estructurada con valores separados para los diferentes elementos de un sistema calendario-reloj. El sistema de referencia temporal está fijado al calendario gregoriano, y el rango de las propiedades año, mes, día restringidas a los correspondientes tipos del XML Schema xsd:gYear, xsd:gMonth y xsd:gDay respectivamente.</skos:definition>
+        <skos:definition xml:lang="en">Description of date and time structured with separate values for the various elements of a calendar-clock system. The temporal reference system is fixed to Gregorian Calendar, and the range of year, month, day properties restricted to corresponding XML Schema types xsd:gYear, xsd:gMonth and xsd:gDay, respectively.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2006/time#DateTimeInterval -->
+
+    <owl:Class rdf:about="http://www.w3.org/2006/time#DateTimeInterval">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2006/time#ProperInterval"/>
+        <rdfs:comment xml:lang="es">&apos;intervalo de fecha-hora&apos; es una subclase de &apos;intervalo propio&apos;, definida utilizando el multi-elemento &apos;descripción de fecha-hora&apos;.</rdfs:comment>
+        <rdfs:comment xml:lang="en">DateTimeInterval is a subclass of ProperInterval, defined using the multi-element DateTimeDescription.</rdfs:comment>
+        <rdfs:label xml:lang="en">Date-time interval</rdfs:label>
+        <rdfs:label xml:lang="es">intervalo de fecha-hora</rdfs:label>
+        <skos:definition xml:lang="es">&apos;intervalo de fecha-hora&apos; es una subclase de &apos;intervalo propio&apos;, definida utilizando el multi-elemento &apos;descripción de fecha-hora&apos;.</skos:definition>
+        <skos:definition xml:lang="en">DateTimeInterval is a subclass of ProperInterval, defined using the multi-element DateTimeDescription.</skos:definition>
+        <skos:note xml:lang="es">&apos;intervalo de fecha-hora&apos; se puede utilizar sólo para un intervalo cuyos límites coinciden con un elemento de fecha-hora alineados con el calendario y la zona horaria indicados. Por ejemplo, aunque ambos tienen una duración de un día, el intervalo de 24 horas que empieza en la media noche del comienzo del 8 mayo en Europa Central se puede expresar como un &apos;intervalo de fecha-hora&apos;, el intervalo de 24 horas que empieza a las 1:30pm no.</skos:note>
+        <skos:note xml:lang="en">:DateTimeInterval can only be used for an interval whose limits coincide with a date-time element aligned to the calendar and timezone indicated. For example, while both have a duration of one day, the 24-hour interval beginning at midnight at the beginning of 8 May in Central Europe can be expressed as a :DateTimeInterval, but the 24-hour interval starting at 1:30pm cannot.</skos:note>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2006/time#DayOfWeek -->
+
+    <owl:Class rdf:about="http://www.w3.org/2006/time#DayOfWeek">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:comment xml:lang="es">El día de la semana</rdfs:comment>
+        <rdfs:comment xml:lang="en">The day of week</rdfs:comment>
+        <rdfs:label xml:lang="en">Day of week</rdfs:label>
+        <rdfs:label xml:lang="es">día de la semana</rdfs:label>
+        <skos:changeNote xml:lang="en">Remove enumeration from definition, in order to allow other days to be used when required in other calendars. 
+NOTE: existing days are still present as members of the class, but the class membership is now open. 
+
+In the original OWL-Time the following constraint appeared: 
+  owl:oneOf (
+      time:Monday
+      time:Tuesday
+      time:Wednesday
+      time:Thursday
+      time:Friday
+      time:Saturday
+      time:Sunday
+    ) ;</skos:changeNote>
+        <skos:definition xml:lang="es">El día de la semana</skos:definition>
+        <skos:definition xml:lang="en">The day of week</skos:definition>
+        <skos:note xml:lang="es">La pertenencia a la clase &apos;día de la semana&apos; está abierta, para permitir longitudes de semana alternativas y diferentes nombres de días.</skos:note>
+        <skos:note xml:lang="en">Membership of the class :DayOfWeek is open, to allow for alternative week lengths and different day names.</skos:note>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2006/time#Duration -->
+
+    <owl:Class rdf:about="http://www.w3.org/2006/time#Duration">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2006/time#TemporalDuration"/>
+        <rdfs:comment xml:lang="es">Duración de una extensión temporal expresada como un número escalado por una unidad temporal.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Duration of a temporal extent expressed as a number scaled by a temporal unit</rdfs:comment>
+        <rdfs:label xml:lang="en">Time duration</rdfs:label>
+        <rdfs:label>duración de tiempo</rdfs:label>
+        <skos:definition xml:lang="es">Duración de una extensión temporal expresada como un número escalado por una unidad temporal.</skos:definition>
+        <skos:definition xml:lang="en">Duration of a temporal extent expressed as a number scaled by a temporal unit</skos:definition>
+        <skos:note xml:lang="es">Alternativa a &apos;descripción de tiempo&apos; para proporcionar descripción soporte a una duración temporal diferente a utilizar un sistema de calendario/reloj.</skos:note>
+        <skos:note xml:lang="en">Alternative to time:DurationDescription to support description of a temporal duration other than using a calendar/clock system.</skos:note>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2006/time#DurationDescription -->
+
+    <owl:Class rdf:about="http://www.w3.org/2006/time#DurationDescription">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2006/time#GeneralDurationDescription"/>
+        <rdfs:comment xml:lang="es">Descripción de extensión temporal estructurada con valores separados para los distintos elementos de un sistema de horario-calendario. El sistema de referencia temporal se fija al calendario gregoriano, y el intervalo de cada una de las propiedades numéricas se restringe a xsd:decimal.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Description of temporal extent structured with separate values for the various elements of a calendar-clock system. The temporal reference system is fixed to Gregorian Calendar, and the range of each of the numeric properties is restricted to xsd:decimal</rdfs:comment>
+        <rdfs:label xml:lang="en">Duration description</rdfs:label>
+        <rdfs:label xml:lang="es">descripción de duración</rdfs:label>
+        <skos:definition xml:lang="es">Descripción de extensión temporal estructurada con valores separados para los distintos elementos de un sistema de horario-calendario. El sistema de referencia temporal se fija al calendario gregoriano, y el intervalo de cada una de las propiedades numéricas se restringe a xsd:decimal.</skos:definition>
+        <skos:definition xml:lang="en">Description of temporal extent structured with separate values for the various elements of a calendar-clock system. The temporal reference system is fixed to Gregorian Calendar, and the range of each of the numeric properties is restricted to xsd:decimal</skos:definition>
+        <skos:note xml:lang="es">En el calendario gregoriano la longitud de los meses no es fija. Por lo tanto, un valor como &quot;2,5 meses&quot; no se puede comparar exactamente con una duración similar expresada en términos de semanas o días.</skos:note>
+        <skos:note xml:lang="en">In the Gregorian calendar the length of the month is not fixed. Therefore, a value like &quot;2.5 months&quot; cannot be exactly compared with a similar duration expressed in terms of weeks or days.</skos:note>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2006/time#GeneralDateTimeDescription -->
+
+    <owl:Class rdf:about="http://www.w3.org/2006/time#GeneralDateTimeDescription">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2006/time#TemporalPosition"/>
+        <rdfs:comment xml:lang="es">Descripción de fecha y hora estructurada con valores separados para los distintos elementos de un sistema calendario-reloj.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Description of date and time structured with separate values for the various elements of a calendar-clock system</rdfs:comment>
+        <rdfs:label xml:lang="en">Generalized date-time description</rdfs:label>
+        <rdfs:label xml:lang="es">descripción de fecha-hora generalizada</rdfs:label>
+        <skos:definition>Descripción de fecha y hora estructurada con valores separados para los distintos elementos de un sistema calendario-reloj.</skos:definition>
+        <skos:definition xml:lang="en">Description of date and time structured with separate values for the various elements of a calendar-clock system</skos:definition>
+        <skos:note xml:lang="es">Algunas combinaciones de propiedades son redundantes - por ejemplo, dentro de un &apos;año&apos; especificado si se proporciona &apos;día del año&apos; entonces &apos;día&apos; y &apos;mes&apos; se pueden computar, y viceversa. Los valores individuales deberían ser consistentes entre ellos y con el calendario, indicado a través del valor de la propiedad &apos;tiene TRS&apos;.</skos:note>
+        <skos:note>Some combinations of properties are redundant - for example, within a specified :year if :dayOfYear is provided then :day and :month can be computed, and vice versa. Individual values should be consistent with each other and the calendar, indicated through the value of the :hasTRS property.</skos:note>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2006/time#GeneralDurationDescription -->
+
+    <owl:Class rdf:about="http://www.w3.org/2006/time#GeneralDurationDescription">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2006/time#TemporalDuration"/>
+        <rdfs:comment xml:lang="es">Descripción de extensión temporal estructurada con valores separados para los distintos elementos de un sistema de horario-calendario.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Description of temporal extent structured with separate values for the various elements of a calendar-clock system.</rdfs:comment>
+        <rdfs:label xml:lang="en">Generalized duration description</rdfs:label>
+        <rdfs:label xml:lang="es">descripción de duración generalizada</rdfs:label>
+        <skos:definition xml:lang="es">Descripción de extensión temporal estructurada con valores separados para los distintos elementos de un sistema de horario-calendario.</skos:definition>
+        <skos:definition xml:lang="en">Description of temporal extent structured with separate values for the various elements of a calendar-clock system.</skos:definition>
+        <skos:note xml:lang="es">La extensión de una duración de tiempo expresada como una &apos;descripción de duración general&apos; depende del Sistema de Referencia Temporal. En algunos calendarios la longitud de la semana o del mes no es constante a lo largo del año. Por tanto, un valor como &quot;25 meses&quot; puede no ser necesariamente ser comparado con un duración similar expresada en términos de semanas o días. Cuando se consideran calendarios que no están basados en el movimiento de la Tierra, se deben tomar incluso más precauciones en la comparación de duraciones.</skos:note>
+        <skos:note xml:lang="en">The extent of a time duration expressed as a GeneralDurationDescription depends on the Temporal Reference System. In some calendars the length of the week or month is not constant within the year. Therefore, a value like &quot;2.5 months&quot; may not necessarily be exactly compared with a similar duration expressed in terms of weeks or days. When non-earth-based calendars are considered even more care must be taken in comparing durations.</skos:note>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2006/time#Instant -->
+
+    <owl:Class rdf:about="http://www.w3.org/2006/time#Instant">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2006/time#TemporalEntity"/>
+        <owl:disjointWith rdf:resource="http://www.w3.org/2006/time#ProperInterval"/>
+        <rdfs:comment xml:lang="en">A temporal entity with zero extent or duration</rdfs:comment>
+        <rdfs:comment xml:lang="es">Una entidad temporal con una extensión o duración cero.</rdfs:comment>
+        <rdfs:label xml:lang="en">Time instant</rdfs:label>
+        <rdfs:label xml:lang="es">instante de tiempo.</rdfs:label>
+        <skos:definition xml:lang="en">A temporal entity with zero extent or duration</skos:definition>
+        <skos:definition xml:lang="es">Una entidad temporal con una extensión o duración cero.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2006/time#Interval -->
+
+    <owl:Class rdf:about="http://www.w3.org/2006/time#Interval">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2006/time#TemporalEntity"/>
+        <rdfs:comment xml:lang="en">A temporal entity with an extent or duration</rdfs:comment>
+        <rdfs:comment xml:lang="es">Una entidad temporal con una extensión o duración.</rdfs:comment>
+        <rdfs:label xml:lang="en">Time interval</rdfs:label>
+        <rdfs:label xml:lang="es">intervalo de tiempo</rdfs:label>
+        <skos:definition xml:lang="en">A temporal entity with an extent or duration</skos:definition>
+        <skos:definition xml:lang="es">Una entidad temporal con una extensión o duración.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2006/time#January -->
+
+    <owl:Class rdf:about="http://www.w3.org/2006/time#January">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2006/time#DateTimeDescription"/>
+        <rdfs:label>January</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+        <skos:historyNote>This class was present in the 2006 version of OWL-Time. It was presented as an example of how DateTimeDescription could be specialized, but does not belong in the revised ontology. </skos:historyNote>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2006/time#MonthOfYear -->
+
+    <owl:Class rdf:about="http://www.w3.org/2006/time#MonthOfYear">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2006/time#DateTimeDescription"/>
+        <rdfs:comment xml:lang="es">El mes del año.</rdfs:comment>
+        <rdfs:comment xml:lang="en">The month of the year</rdfs:comment>
+        <rdfs:label xml:lang="en">Month of year</rdfs:label>
+        <rdfs:label xml:lang="es">mes del año</rdfs:label>
+        <skos:definition xml:lang="es">El mes del año.</skos:definition>
+        <skos:definition xml:lang="en">The month of the year</skos:definition>
+        <skos:editorialNote xml:lang="es">Característica en riesgo - añadida en la revisión de 2017, y no utilizada todavía de forma amplia.</skos:editorialNote>
+        <skos:editorialNote xml:lang="en">Feature at risk - added in 2017 revision, and not yet widely used. </skos:editorialNote>
+        <skos:note xml:lang="es">La pertenencia a la clase &apos;mes del año&apos; está abierta, a permitir calendarios anuales alternativos y diferentes nombres de meses.</skos:note>
+        <skos:note xml:lang="en">Membership of the class :MonthOfYear is open, to allow for alternative annual calendars and different month names.</skos:note>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2006/time#ProperInterval -->
+
+    <owl:Class rdf:about="http://www.w3.org/2006/time#ProperInterval">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2006/time#Interval"/>
+        <rdfs:comment xml:lang="en">A temporal entity with non-zero extent or duration, i.e. for which the value of the beginning and end are different</rdfs:comment>
+        <rdfs:comment xml:lang="es">Una entidad temporal con extensión o duración distinta de cero, es decir, para la cual los valores de principio y fin del intervalo son diferentes.</rdfs:comment>
+        <rdfs:label xml:lang="en">Proper interval</rdfs:label>
+        <rdfs:label xml:lang="es">intervalo propio</rdfs:label>
+        <skos:definition xml:lang="en">A temporal entity with non-zero extent or duration, i.e. for which the value of the beginning and end are different</skos:definition>
+        <skos:definition xml:lang="es">Una entidad temporal con extensión o duración distinta de cero, es decir, para la cual los valores de principio y fin del intervalo son diferentes.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2006/time#TRS -->
+
+    <owl:Class rdf:about="http://www.w3.org/2006/time#TRS">
+        <rdfs:comment xml:lang="en">A temporal reference system, such as a temporal coordinate system (with an origin, direction, and scale), a calendar-clock combination, or a (possibly hierarchical) ordinal system. 
+
+This is a stub class, representing the set of all temporal reference systems.</rdfs:comment>
+        <rdfs:comment xml:lang="es">Un sistema de referencia temporal, tal como un sistema de coordenadas temporales (con un origen, una dirección y una escala), una combinación calendario-reloj, o un sistema ordinal (posiblemente jerárquico).
+        Esta clase comodín representa el conjunto de todos los sistemas de referencia temporal.</rdfs:comment>
+        <rdfs:label xml:lang="en">Temporal Reference System</rdfs:label>
+        <rdfs:label xml:lang="es">sistema de referencia temporal</rdfs:label>
+        <skos:definition xml:lang="en">A temporal reference system, such as a temporal coordinate system (with an origin, direction, and scale), a calendar-clock combination, or a (possibly hierarchical) ordinal system. 
+
+This is a stub class, representing the set of all temporal reference systems.</skos:definition>
+        <skos:definition xml:lang="es">Un sistema de referencia temporal, tal como un sistema de coordenadas temporales (con un origen, una dirección y una escala), una combinación calendario-reloj, o un sistema ordinal (posiblemente jerárquico).
+    Esta clase comodín representa el conjunto de todos los sistemas de referencia temporal.</skos:definition>
+        <skos:note xml:lang="en">A taxonomy of temporal reference systems is provided in ISO 19108:2002 [ISO19108], including (a) calendar + clock systems; (b) temporal coordinate systems (i.e. numeric offset from an epoch); (c) temporal ordinal reference systems (i.e. ordered sequence of named intervals, not necessarily of equal duration).</skos:note>
+        <skos:note xml:lang="es">En el ISO 19108:2002 [ISO19108] se proporciona una taxonomía de sistemas de referencia temporal, incluyendo (a) sistemas de calendario + reloj; (b) sistemas de coordenadas temporales (es decir, desplazamiento numérico a partir de una época); (c) sistemas de referencia ordinales temporales (es decir, secuencia ordenada de intervalos nombrados, no necesariamente de igual duración).</skos:note>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2006/time#TemporalDuration -->
+
+    <owl:Class rdf:about="http://www.w3.org/2006/time#TemporalDuration">
+        <rdfs:comment xml:lang="es">Extensión de tiempo; duración de un intervalo de tiempo independiente de su posición de inicio particular.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Time extent; duration of a time interval separate from its particular start position</rdfs:comment>
+        <rdfs:label xml:lang="en">Temporal duration</rdfs:label>
+        <rdfs:label xml:lang="es">duración temporal</rdfs:label>
+        <skos:definition xml:lang="es">Extensión de tiempo; duración de un intervalo de tiempo independiente de su posición de inicio particular.</skos:definition>
+        <skos:definition xml:lang="en">Time extent; duration of a time interval separate from its particular start position</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2006/time#TemporalEntity -->
+
+    <owl:Class rdf:about="http://www.w3.org/2006/time#TemporalEntity">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.w3.org/2006/time#Instant"/>
+                    <rdf:Description rdf:about="http://www.w3.org/2006/time#Interval"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:comment xml:lang="en">A temporal interval or instant.</rdfs:comment>
+        <rdfs:comment xml:lang="es">Un intervalo temporal o un instante.</rdfs:comment>
+        <rdfs:label xml:lang="en">Temporal entity</rdfs:label>
+        <rdfs:label xml:lang="es">entidad temporal</rdfs:label>
+        <skos:definition xml:lang="en">A temporal interval or instant.</skos:definition>
+        <skos:definition xml:lang="es">Un intervalo temporal o un instante.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2006/time#TemporalPosition -->
+
+    <owl:Class rdf:about="http://www.w3.org/2006/time#TemporalPosition">
+        <rdfs:comment xml:lang="en">A position on a time-line</rdfs:comment>
+        <rdfs:comment xml:lang="es">Una posición sobre una línea de tiempo.</rdfs:comment>
+        <rdfs:label xml:lang="en">Temporal position</rdfs:label>
+        <rdfs:label xml:lang="es">posición temporal</rdfs:label>
+        <skos:definition xml:lang="en">A position on a time-line</skos:definition>
+        <skos:definition xml:lang="es">Una posición sobre una línea de tiempo.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2006/time#TemporalUnit -->
+
+    <owl:Class rdf:about="http://www.w3.org/2006/time#TemporalUnit">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2006/time#TemporalDuration"/>
+        <rdfs:comment xml:lang="en">A standard duration, which provides a scale factor for a time extent, or the granularity or precision for a time position.</rdfs:comment>
+        <rdfs:comment xml:lang="es">Una duración estándar, que proporciona un factor de escala para una extensión de tiempo, o la granularidad o precisión para una posición de tiempo.</rdfs:comment>
+        <rdfs:label xml:lang="en">Temporal unit</rdfs:label>
+        <rdfs:label xml:lang="es">unidad de tiempo</rdfs:label>
+        <skos:changeNote xml:lang="en">Remove enumeration from definition, in order to allow other units to be used when required in other coordinate systems. 
+NOTE: existing units are still present as members of the class, but the class membership is now open. 
+
+In the original OWL-Time the following constraint appeared: 
+  owl:oneOf (
+      time:unitSecond
+      time:unitMinute
+      time:unitHour
+      time:unitDay
+      time:unitWeek
+      time:unitMonth
+      time:unitYear
+    ) ;</skos:changeNote>
+        <skos:definition xml:lang="en">A standard duration, which provides a scale factor for a time extent, or the granularity or precision for a time position.</skos:definition>
+        <skos:definition xml:lang="es">Una duración estándar, que proporciona un factor de escala para una extensión de tiempo, o la granularidad o precisión para una posición de tiempo.</skos:definition>
+        <skos:note xml:lang="es">La pertenencia de la clase &apos;unidad de tiempo&apos; está abierta, para permitir otras unidades de tiempo utilizadas en algunas aplicaciones técnicas (por ejemplo, millones de años o el mes Baha&apos;i).</skos:note>
+        <skos:note xml:lang="en">Membership of the class TemporalUnit is open, to allow for other temporal units used in some technical applications (e.g. millions of years, Baha&apos;i month).</skos:note>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2006/time#TimePosition -->
+
+    <owl:Class rdf:about="http://www.w3.org/2006/time#TimePosition">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2006/time#TemporalPosition"/>
+        <rdfs:comment xml:lang="en">A temporal position described using either a (nominal) value from an ordinal reference system, or a (numeric) value in a temporal coordinate system. </rdfs:comment>
+        <rdfs:comment xml:lang="es">Una posición temporal descrita utilizando bien un valor (nominal) de un sistema de referencia ordinal, o un valor (numérico) en un sistema de coordenadas temporales.</rdfs:comment>
+        <rdfs:label xml:lang="en">Time position</rdfs:label>
+        <rdfs:label xml:lang="es">posición de tiempo</rdfs:label>
+        <skos:definition xml:lang="en">A temporal position described using either a (nominal) value from an ordinal reference system, or a (numeric) value in a temporal coordinate system. </skos:definition>
+        <skos:definition xml:lang="es">Una posición temporal descrita utilizando bien un valor (nominal) de un sistema de referencia ordinal, o un valor (numérico) en un sistema de coordenadas temporales.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2006/time#TimeZone -->
+
+    <owl:Class rdf:about="http://www.w3.org/2006/time#TimeZone">
+        <rdfs:comment xml:lang="en">A Time Zone specifies the amount by which the local time is offset from UTC. 
+	A time zone is usually denoted geographically (e.g. Australian Eastern Daylight Time), with a constant value in a given region. 
+The region where it applies and the offset from UTC are specified by a locally recognised governing authority.</rdfs:comment>
+        <rdfs:comment xml:lang="es">Un huso horario especifica la cantidad en que la hora local está desplazada con respecto a UTC.
+        Un huso horario normalmente se denota geográficamente (p.ej. el horario de verano del este de Australia), con un valor constante en una región dada.
+        La región donde aplica y el desplazamiento desde UTC las especifica una autoridad gubernamental localmente reconocida.</rdfs:comment>
+        <rdfs:label xml:lang="en">Time Zone</rdfs:label>
+        <rdfs:label xml:lang="es">huso horario</rdfs:label>
+        <skos:definition xml:lang="en">A Time Zone specifies the amount by which the local time is offset from UTC. 
+	A time zone is usually denoted geographically (e.g. Australian Eastern Daylight Time), with a constant value in a given region. 
+The region where it applies and the offset from UTC are specified by a locally recognised governing authority.</skos:definition>
+        <skos:definition xml:lang="es">Un huso horario especifica la cantidad en que la hora local está desplazada con respecto a UTC.
+    Un huso horario normalmente se denota geográficamente (p.ej. el horario de verano del este de Australia), con un valor constante en una región dada.
+    La región donde aplica y el desplazamiento desde UTC las especifica una autoridad gubernamental localmente reconocida.</skos:definition>
+        <skos:historyNote xml:lang="es">En la versión original de OWL-Time de 2006, se definió, en un espacio de nombres diferente &quot;http://www.w3.org/2006/timezone#&quot;, la clase &apos;huso horario&apos;, con varias propiedades específicas correspondientes a un modelo específico de huso horario.
+    En la versión actual hay una clase con el mismo nombre local en el espacio de nombres de OWL-Time, eliminando la dependencia del espacio de nombres externo.
+    Un axioma de alineación permite que los datos codificados de acuerdo con la versión anterior sean consistentes con la ontología actualizada.</skos:historyNote>
+        <skos:historyNote>In the original 2006 version of OWL-Time, the TimeZone class, with several properties corresponding to a specific model of time-zones, was defined in a separate namespace &quot;http://www.w3.org/2006/timezone#&quot;. 
+
+In the current version a class with same local name is put into the main OWL-Time namespace, removing the dependency on the external namespace. 
+
+An alignment axiom 
+	tzont:TimeZone rdfs:subClassOf time:TimeZone . 
+allows data encoded according to the previous version to be consistent with the updated ontology. </skos:historyNote>
+        <skos:note xml:lang="en">A designated timezone is associated with a geographic region. However, for a particular region the offset from UTC often varies seasonally, and the dates of the changes may vary from year to year. The timezone designation usually changes for the different seasons (e.g. Australian Eastern Standard Time vs. Australian Eastern Daylight Time). Furthermore, the offset for a timezone may change over longer timescales, though its designation might not.  
+
+Detailed guidance about working with time zones is given in http://www.w3.org/TR/timezone/ .</skos:note>
+        <skos:note xml:lang="en">An ontology for time zone descriptions was described in [owl-time-20060927] and provided as RDF in a separate namespace tzont:. However, that ontology was incomplete in scope, and the example datasets were selective. Furthermore, since the use of a class from an external ontology as the range of an ObjectProperty in OWL-Time creates a dependency, reference to the time zone class has been replaced with the &apos;stub&apos; class in the normative part of this version of OWL-Time.</skos:note>
+        <skos:note xml:lang="es">Un huso horario designado está asociado con una región geográfica. Sin embargo, para una región particular el desplazamiento desde UTC a menudo varía según las estaciones, y las fechas de los cambios pueden variar de un año a otro. La designación de huso horario  normalmente cambia de una estación a otra (por ejemplo, el horario estándar frente al horario de verano ambos del este de Australia). Además, del desplazamiento para un huso horario puede cambiar sobre escalas de tiempo mayores, aunque su designación no lo haga.
+    Se puede encontrar una guía detallada sobre el funcionamiento de husos horarios en http://www.w3.org/TR/timezone/.&quot;@es , &quot;En [owl-time-20060927] se describió una ontología para descripciones de husos horarios, y se proporcionó en un espacio de nombres separado tzont:. Sin embargo, dicha ontología estaba incompleta en su alcance, y el ejemplo de conjuntos de datos (datasets) era selectivo. Además, puesto que el uso de una clase de una ontología externa como el rango de una propiedad de objeto en OWL-Time crea una dependencia, la referencia a la clase huso horario se ha reemplazado por una clase que viene a ser un &quot;cajón de sastre&quot; en la en la parte normativa de esta versión de OWL-Time.</skos:note>
+        <skos:scopeNote xml:lang="es">En esta implementación &apos;huso horario&apos; no tiene definidas propiedades. Se debería pensar como una superclase &quot;abstracta&quot; de todas las implementaciones de huso horario específicas.</skos:scopeNote>
+        <skos:scopeNote>In this implementation TimeZone has no properties defined. It should be thought of as an &apos;abstract&apos; superclass of all specific timezone implementations.</skos:scopeNote>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2006/time#Year -->
+
+    <owl:Class rdf:about="http://www.w3.org/2006/time#Year">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2006/time#DurationDescription"/>
+        <rdfs:comment>Year duration</rdfs:comment>
+        <rdfs:label xml:lang="en">Year</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+        <skos:definition>Year duration</skos:definition>
+        <skos:historyNote>Year was proposed in the 2006 version of OWL-Time as an example of how DurationDescription could be specialized to allow for a duration to be restricted to a number of years. 
+
+It is deprecated in this edition of OWL-Time. </skos:historyNote>
+        <skos:prefLabel xml:lang="it">Anno</skos:prefLabel>
+        <skos:prefLabel xml:lang="fr">Année (calendrier)</skos:prefLabel>
+        <skos:prefLabel xml:lang="pt">Ano</skos:prefLabel>
+        <skos:prefLabel xml:lang="es">Año</skos:prefLabel>
+        <skos:prefLabel xml:lang="nl">Jaar</skos:prefLabel>
+        <skos:prefLabel xml:lang="de">Jahr</skos:prefLabel>
+        <skos:prefLabel xml:lang="pl">Rok</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">Year</skos:prefLabel>
+        <skos:prefLabel xml:lang="ru">Год</skos:prefLabel>
+        <skos:prefLabel xml:lang="ar">سنة</skos:prefLabel>
+        <skos:prefLabel xml:lang="ja">年</skos:prefLabel>
+        <skos:prefLabel xml:lang="zh">年</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/2006/time#Friday -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/2006/time#Friday">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#DayOfWeek"/>
+        <rdfs:label xml:lang="en">Friday</rdfs:label>
+        <skos:prefLabel xml:lang="de">Freitag</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">Friday</skos:prefLabel>
+        <skos:prefLabel xml:lang="pl">Piątek</skos:prefLabel>
+        <skos:prefLabel xml:lang="pt">Sexta-feira</skos:prefLabel>
+        <skos:prefLabel xml:lang="fr">Vendredi</skos:prefLabel>
+        <skos:prefLabel xml:lang="it">Venerdì</skos:prefLabel>
+        <skos:prefLabel xml:lang="es">Viernes</skos:prefLabel>
+        <skos:prefLabel xml:lang="nl">Vrijdag</skos:prefLabel>
+        <skos:prefLabel xml:lang="ru">Пятница</skos:prefLabel>
+        <skos:prefLabel xml:lang="ar">الجمعة</skos:prefLabel>
+        <skos:prefLabel xml:lang="zh">星期五</skos:prefLabel>
+        <skos:prefLabel xml:lang="ja">金曜日</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/2006/time#Monday -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/2006/time#Monday">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#DayOfWeek"/>
+        <rdfs:label xml:lang="en">Monday</rdfs:label>
+        <skos:prefLabel xml:lang="fr">Lundi</skos:prefLabel>
+        <skos:prefLabel xml:lang="it">Lunedì</skos:prefLabel>
+        <skos:prefLabel xml:lang="es">Lunes</skos:prefLabel>
+        <skos:prefLabel xml:lang="nl">Maandag</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">Monday</skos:prefLabel>
+        <skos:prefLabel xml:lang="de">Montag</skos:prefLabel>
+        <skos:prefLabel xml:lang="pl">Poniedziałek</skos:prefLabel>
+        <skos:prefLabel xml:lang="pt">Segunda-feira</skos:prefLabel>
+        <skos:prefLabel xml:lang="ru">Понедельник</skos:prefLabel>
+        <skos:prefLabel xml:lang="ar">الاثنين</skos:prefLabel>
+        <skos:prefLabel xml:lang="zh">星期一</skos:prefLabel>
+        <skos:prefLabel xml:lang="ja">月曜日</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/2006/time#Saturday -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/2006/time#Saturday">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#DayOfWeek"/>
+        <rdfs:label xml:lang="en">Saturday</rdfs:label>
+        <skos:prefLabel xml:lang="it">Sabato</skos:prefLabel>
+        <skos:prefLabel xml:lang="fr">Samedi</skos:prefLabel>
+        <skos:prefLabel xml:lang="de">Samstag</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">Saturday</skos:prefLabel>
+        <skos:prefLabel xml:lang="pl">Sobota</skos:prefLabel>
+        <skos:prefLabel xml:lang="es">Sábado</skos:prefLabel>
+        <skos:prefLabel xml:lang="pt">Sábado</skos:prefLabel>
+        <skos:prefLabel xml:lang="nl">Zaterdag</skos:prefLabel>
+        <skos:prefLabel xml:lang="ru">Суббота</skos:prefLabel>
+        <skos:prefLabel xml:lang="ar">السبت</skos:prefLabel>
+        <skos:prefLabel xml:lang="ja">土曜日</skos:prefLabel>
+        <skos:prefLabel xml:lang="zh">星期六</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/2006/time#Sunday -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/2006/time#Sunday">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#DayOfWeek"/>
+        <rdfs:label xml:lang="en">Sunday</rdfs:label>
+        <skos:prefLabel xml:lang="fr">Dimanche</skos:prefLabel>
+        <skos:prefLabel xml:lang="it">Domenica</skos:prefLabel>
+        <skos:prefLabel xml:lang="es">Domingo</skos:prefLabel>
+        <skos:prefLabel xml:lang="pt">Domingo</skos:prefLabel>
+        <skos:prefLabel xml:lang="pl">Niedziela</skos:prefLabel>
+        <skos:prefLabel xml:lang="de">Sonntag</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">Sunday</skos:prefLabel>
+        <skos:prefLabel xml:lang="nl">Zondag</skos:prefLabel>
+        <skos:prefLabel xml:lang="ru">Воскресенье</skos:prefLabel>
+        <skos:prefLabel xml:lang="ar">الأحد (يوم)</skos:prefLabel>
+        <skos:prefLabel xml:lang="ja">日曜日</skos:prefLabel>
+        <skos:prefLabel xml:lang="zh">星期日</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/2006/time#Thursday -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/2006/time#Thursday">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#DayOfWeek"/>
+        <rdfs:label xml:lang="en">Thursday</rdfs:label>
+        <skos:prefLabel xml:lang="pl">Czwartek</skos:prefLabel>
+        <skos:prefLabel xml:lang="nl">Donderdag</skos:prefLabel>
+        <skos:prefLabel xml:lang="de">Donnerstag</skos:prefLabel>
+        <skos:prefLabel xml:lang="it">Giovedì</skos:prefLabel>
+        <skos:prefLabel xml:lang="fr">Jeudi</skos:prefLabel>
+        <skos:prefLabel xml:lang="es">Jueves</skos:prefLabel>
+        <skos:prefLabel xml:lang="pt">Quinta-feira</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">Thursday</skos:prefLabel>
+        <skos:prefLabel xml:lang="ru">Четверг</skos:prefLabel>
+        <skos:prefLabel xml:lang="ar">الخميس</skos:prefLabel>
+        <skos:prefLabel xml:lang="zh">星期四</skos:prefLabel>
+        <skos:prefLabel xml:lang="ja">木曜日</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/2006/time#Tuesday -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/2006/time#Tuesday">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#DayOfWeek"/>
+        <rdfs:label xml:lang="en">Tuesday</rdfs:label>
+        <skos:prefLabel xml:lang="de">Dienstag</skos:prefLabel>
+        <skos:prefLabel xml:lang="nl">Dinsdag</skos:prefLabel>
+        <skos:prefLabel xml:lang="fr">Mardi</skos:prefLabel>
+        <skos:prefLabel xml:lang="it">Martedì</skos:prefLabel>
+        <skos:prefLabel xml:lang="es">Martes</skos:prefLabel>
+        <skos:prefLabel xml:lang="pt">Terça-feira</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">Tuesday</skos:prefLabel>
+        <skos:prefLabel xml:lang="pl">Wtorek</skos:prefLabel>
+        <skos:prefLabel xml:lang="ru">Вторник</skos:prefLabel>
+        <skos:prefLabel xml:lang="ar">الثلاثاء</skos:prefLabel>
+        <skos:prefLabel xml:lang="zh">星期二</skos:prefLabel>
+        <skos:prefLabel xml:lang="ja">火曜日</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/2006/time#Wednesday -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/2006/time#Wednesday">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#DayOfWeek"/>
+        <rdfs:label xml:lang="en">Wednesday</rdfs:label>
+        <skos:prefLabel xml:lang="it">Mercoledì</skos:prefLabel>
+        <skos:prefLabel xml:lang="fr">Mercredi</skos:prefLabel>
+        <skos:prefLabel xml:lang="de">Mittwoch</skos:prefLabel>
+        <skos:prefLabel xml:lang="es">Miércoles</skos:prefLabel>
+        <skos:prefLabel xml:lang="pt">Quarta-feira</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">Wednesday</skos:prefLabel>
+        <skos:prefLabel xml:lang="nl">Woensdag</skos:prefLabel>
+        <skos:prefLabel xml:lang="pl">Środa</skos:prefLabel>
+        <skos:prefLabel xml:lang="ru">Среда</skos:prefLabel>
+        <skos:prefLabel xml:lang="ar">الأربعاء</skos:prefLabel>
+        <skos:prefLabel xml:lang="zh">星期三</skos:prefLabel>
+        <skos:prefLabel xml:lang="ja">水曜日</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/2006/time#unitDay -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/2006/time#unitDay">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#TemporalUnit"/>
+        <rdfs:label xml:lang="en">Day (unit of temporal duration)</rdfs:label>
+        <skos:prefLabel xml:lang="de">Tag</skos:prefLabel>
+        <skos:prefLabel xml:lang="nl">dag</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">day</skos:prefLabel>
+        <skos:prefLabel xml:lang="pt">dia</skos:prefLabel>
+        <skos:prefLabel xml:lang="pl">doba</skos:prefLabel>
+        <skos:prefLabel xml:lang="es">día</skos:prefLabel>
+        <skos:prefLabel xml:lang="it">giorno</skos:prefLabel>
+        <skos:prefLabel xml:lang="fr">jour</skos:prefLabel>
+        <skos:prefLabel xml:lang="ar">يوماً ما</skos:prefLabel>
+        <skos:prefLabel xml:lang="jp">ある日</skos:prefLabel>
+        <skos:prefLabel xml:lang="zh">一天</skos:prefLabel>
+        <skos:prefLabel xml:lang="kr">언젠가</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/2006/time#unitHour -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/2006/time#unitHour">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#TemporalUnit"/>
+        <rdfs:label xml:lang="en">Hour (unit of temporal duration)</rdfs:label>
+        <skos:prefLabel xml:lang="de">Stunde</skos:prefLabel>
+        <skos:prefLabel xml:lang="pl">godzina</skos:prefLabel>
+        <skos:prefLabel xml:lang="fr">heure</skos:prefLabel>
+        <skos:prefLabel xml:lang="es">hora</skos:prefLabel>
+        <skos:prefLabel xml:lang="pt">hora</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">hour</skos:prefLabel>
+        <skos:prefLabel xml:lang="it">ora</skos:prefLabel>
+        <skos:prefLabel xml:lang="nl">uur</skos:prefLabel>
+        <skos:prefLabel>один час&quot;@ru</skos:prefLabel>
+        <skos:prefLabel xml:lang="ar">ساعة واحدة</skos:prefLabel>
+        <skos:prefLabel xml:lang="zh">一小時</skos:prefLabel>
+        <skos:prefLabel xml:lang="jp">一時間</skos:prefLabel>
+        <skos:prefLabel xml:lang="kr">한 시간</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/2006/time#unitMinute -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/2006/time#unitMinute">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#TemporalUnit"/>
+        <rdfs:label xml:lang="en">Minute (unit of temporal duration)</rdfs:label>
+        <skos:prefLabel xml:lang="de">Minute</skos:prefLabel>
+        <skos:prefLabel xml:lang="pl">minuta</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">minute</skos:prefLabel>
+        <skos:prefLabel xml:lang="fr">minute</skos:prefLabel>
+        <skos:prefLabel xml:lang="es">minuto</skos:prefLabel>
+        <skos:prefLabel xml:lang="it">minuto</skos:prefLabel>
+        <skos:prefLabel xml:lang="pt">minuto</skos:prefLabel>
+        <skos:prefLabel xml:lang="nl">minuut</skos:prefLabel>
+        <skos:prefLabel xml:lang="ru">одна минута</skos:prefLabel>
+        <skos:prefLabel xml:lang="ar">دقيقة واحدة</skos:prefLabel>
+        <skos:prefLabel xml:lang="jp">一分</skos:prefLabel>
+        <skos:prefLabel xml:lang="zh">等一下</skos:prefLabel>
+        <skos:prefLabel xml:lang="kr">분</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/2006/time#unitMonth -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/2006/time#unitMonth">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#TemporalUnit"/>
+        <rdfs:label xml:lang="en">Month (unit of temporal duration)</rdfs:label>
+        <skos:prefLabel xml:lang="de">Monat</skos:prefLabel>
+        <skos:prefLabel xml:lang="nl">maand</skos:prefLabel>
+        <skos:prefLabel xml:lang="es">mes</skos:prefLabel>
+        <skos:prefLabel xml:lang="it">mese</skos:prefLabel>
+        <skos:prefLabel xml:lang="pl">miesiąc</skos:prefLabel>
+        <skos:prefLabel xml:lang="fr">mois</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">month</skos:prefLabel>
+        <skos:prefLabel xml:lang="ru">один месяц</skos:prefLabel>
+        <skos:prefLabel xml:lang="ar">شهر واحد</skos:prefLabel>
+        <skos:prefLabel xml:lang="jp">一か月</skos:prefLabel>
+        <skos:prefLabel xml:lang="zh">一個月</skos:prefLabel>
+        <skos:prefLabel xml:lang="kr">한달</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/2006/time#unitSecond -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/2006/time#unitSecond">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#TemporalUnit"/>
+        <rdfs:label xml:lang="en">Second (unit of temporal duration)</rdfs:label>
+        <skos:prefLabel xml:lang="de">Sekunde</skos:prefLabel>
+        <skos:prefLabel xml:lang="pl">Sekundę</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">second</skos:prefLabel>
+        <skos:prefLabel xml:lang="fr">seconde</skos:prefLabel>
+        <skos:prefLabel xml:lang="nl">seconde</skos:prefLabel>
+        <skos:prefLabel xml:lang="it">secondo</skos:prefLabel>
+        <skos:prefLabel xml:lang="es">segundo</skos:prefLabel>
+        <skos:prefLabel xml:lang="pt">segundo</skos:prefLabel>
+        <skos:prefLabel xml:lang="ar">ثانية واحدة</skos:prefLabel>
+        <skos:prefLabel xml:lang="jp">一秒</skos:prefLabel>
+        <skos:prefLabel xml:lang="zh">一秒</skos:prefLabel>
+        <skos:prefLabel xml:lang="kr">일초</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/2006/time#unitWeek -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/2006/time#unitWeek">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#TemporalUnit"/>
+        <rdfs:label xml:lang="en">Week (unit of temporal duration)</rdfs:label>
+        <skos:prefLabel xml:lang="de">Woche</skos:prefLabel>
+        <skos:prefLabel xml:lang="fr">semaine</skos:prefLabel>
+        <skos:prefLabel xml:lang="es">semana</skos:prefLabel>
+        <skos:prefLabel xml:lang="pt">semana</skos:prefLabel>
+        <skos:prefLabel xml:lang="it">settimana</skos:prefLabel>
+        <skos:prefLabel xml:lang="pl">tydzień</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">week</skos:prefLabel>
+        <skos:prefLabel xml:lang="nl">week</skos:prefLabel>
+        <skos:prefLabel xml:lang="ru">одна неделя</skos:prefLabel>
+        <skos:prefLabel xml:lang="ar">سبوع واحد</skos:prefLabel>
+        <skos:prefLabel xml:lang="zh">一周</skos:prefLabel>
+        <skos:prefLabel xml:lang="jp">一週間</skos:prefLabel>
+        <skos:prefLabel xml:lang="kr">일주일</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/2006/time#unitYear -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/2006/time#unitYear">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#TemporalUnit"/>
+        <rdfs:label xml:lang="en">Year (unit of temporal duration)</rdfs:label>
+        <skos:prefLabel xml:lang="kr">1 년</skos:prefLabel>
+        <skos:prefLabel xml:lang="jp">1年</skos:prefLabel>
+        <skos:prefLabel xml:lang="de">Jahr</skos:prefLabel>
+        <skos:prefLabel xml:lang="fr">an</skos:prefLabel>
+        <skos:prefLabel xml:lang="it">anno</skos:prefLabel>
+        <skos:prefLabel xml:lang="pt">ano</skos:prefLabel>
+        <skos:prefLabel xml:lang="nl">jaar</skos:prefLabel>
+        <skos:prefLabel xml:lang="pl">rok</skos:prefLabel>
+        <skos:prefLabel xml:lang="es">un año</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">year</skos:prefLabel>
+        <skos:prefLabel xml:lang="ru">один год</skos:prefLabel>
+        <skos:prefLabel xml:lang="ar">سنة واحدة</skos:prefLabel>
+        <skos:prefLabel xml:lang="zh">一年</skos:prefLabel>
+    </owl:NamedIndividual>
+    <rdf:Description>
+        <xsd:pattern>---(0[1-9]|[1-9][0-9])(Z|(\+|-)((0[0-9]|1[0-3]):[0-5][0-9]|14:00))?</xsd:pattern>
+    </rdf:Description>
+    <rdf:Description>
+        <xsd:pattern>--(0[1-9]|1[0-9]|20)(Z|(\+|-)((0[0-9]|1[0-3]):[0-5][0-9]|14:00))?</xsd:pattern>
+    </rdf:Description>
+    <rdf:Description>
+        <xsd:pattern>-?([1-9][0-9]{3,}|0[0-9]{3})(Z|(\+|-)((0[0-9]|1[0-3]):[0-5][0-9]|14:00))?</xsd:pattern>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#dateTimeStamp">
+        <rdfs:label xml:lang="es">sello de tiempo</rdfs:label>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

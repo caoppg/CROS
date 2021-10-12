@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+    <uri id="Imports Wizard Entry" name="http://www.semanticweb.org/sadee/ontologies/2021/1/Tatatology" uri="ColdRollingSteelOntology.owl"/>
+    <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
+        <uri id="Automatically generated entry, Timestamp=1634040258502" name="http://inwatersense.uni-pr.edu/ontologies/inws-core.owl" uri="MyOntoC.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1634040258502" name="http://inwatersense.uni-pr.edu/ontologies/inws-pollutants.owl" uri="MyOntoP.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1634040258502" name="http://inwatersense.uni-pr.edu/ontologies/inws-regulations.owl" uri="MyOntoR.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1634040258502" name="duplicate:http://www.semanticweb.org/cao/ontologies/2021/5/SteelOntology" uri="CROS.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1634040258502" name="duplicate:http://www.semanticweb.org/cao/ontologies/2021/5/SteelOntology" uri="SteelOntology.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1634040258502" name="duplicate:http://www.semanticweb.org/cao/ontologies/2021/5/SteelOntology" uri="SteelOntologySpecialised.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1634040258502" name="http://www.semanticweb.org/sadee/ontologies/2021/1/Tatatology" uri="SadeerSteelOntology.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1634040258502" name="http://www.w3.org/2006/time" uri="Time.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1634040258502" name="http://www.w3.org/ns/sosa/" uri="Sosa.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1634040258502" name="http://www.w3.org/ns/ssn/" uri="SSN.owl"/>
+    </group>
+</catalog>
